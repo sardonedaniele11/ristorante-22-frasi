@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Specialties from "@/components/Specialties";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
+import InstagramFeed from "@/components/InstagramFeed";
 import SocialConnect from "@/components/SocialConnect";
 import ContactAndHours from "@/components/ContactAndHours";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Specialties />
         <About />
+        <InstagramFeed />
         <Gallery />
         <SocialConnect />
         <ContactAndHours />
