@@ -19,22 +19,23 @@ export const siteConfig = {
 
   // Contatti e Social collegabili direttamente
   contact: {
-    phone: "+39 000 0000000", // Da sostituire con il numero reale del bistrò
-    phoneDisplay: "+39 000 000 0000",
-    whatsapp: "390000000000", // Numero WhatsApp senza spazi e senza '+'
+    phone: "+390802369792",
+    phoneDisplay: "080 236 9792",
+    whatsapp: "390802369792", // WhatsApp collegato al numero del bistrò (aggiornabile se hanno un cellulare)
     whatsappDefaultMessage:
-      "Ciao! Vorrei prenotare un tavolo presso 22 Frasi - Il bistrò di Puglia.",
-    instagram: "https://instagram.com", // Da sostituire con la pagina ufficiale
-    instagramHandle: "@22frasi_bistrodipuglia",
-    facebook: "https://facebook.com", // Da sostituire con la pagina ufficiale
-    facebookName: "22 Frasi - Il bistrò di Puglia",
-    email: "info@22frasipuglia.it",
-    address: "Via del Gusto, 22 - Italia", // Indirizzo reale
-    googleMapsUrl: "https://maps.google.com",
+      "Ciao! Vorrei prenotare un tavolo presso 22 Frasi - Il bistrò di Puglia a Bari.",
+    instagram: "https://www.instagram.com/explore/tags/22frasi/",
+    instagramHandle: "@22FraSi",
+    facebook: "https://www.facebook.com/22FraSi",
+    facebookName: "22 FraSi - Il Bistrò di Puglia",
+    email: "info@22frasi.it",
+    address: "Via Nicolò Putignani, 144/A/B, 70121 Bari BA",
+    googleMapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=22+FraSi+Via+Nicol%C3%B2+Putignani+144+Bari",
     hours: [
-      { days: "Lunedì - Venerdì", lunch: "12:00 - 15:00", dinner: "19:00 - 23:30" },
-      { days: "Sabato", lunch: "12:00 - 15:30", dinner: "19:00 - 00:00" },
-      { days: "Domenica", lunch: "12:00 - 16:30", dinner: "Chiuso la sera" },
+      { days: "Lunedì - Venerdì", lunch: "11:00 - 14:30", dinner: "19:30 - 23:00" },
+      { days: "Sabato", lunch: "11:00 - 23:30 (Orario Continuato)", dinner: "Aperto a cena" },
+      { days: "Domenica", lunch: "Chiuso", dinner: "Chiuso" },
     ],
   },
 

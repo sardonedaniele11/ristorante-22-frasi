@@ -27,13 +27,25 @@ export default function ContactAndHours() {
                   <span className="font-medium text-white text-base">
                     {schedule.days}
                   </span>
-                  <div className="flex items-center gap-4 text-sm text-neutral-300 font-mono">
-                    <span className="px-2.5 py-1 rounded bg-[#0e271d] border border-[#1b4d3e] text-amber-300 text-xs">
-                      Pranzo: {schedule.lunch}
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#0e271d] border border-[#1b4d3e] text-[#a3c9b8] text-xs">
-                      Cena: {schedule.dinner}
-                    </span>
+                  <div className="flex items-center gap-2.5 text-sm font-mono flex-wrap">
+                    {schedule.lunch === "Chiuso" ? (
+                      <span className="px-3 py-1 rounded-full bg-red-950/40 border border-red-800/50 text-red-300 text-xs font-medium">
+                        Chiuso tutto il giorno
+                      </span>
+                    ) : schedule.days.includes("Sabato") ? (
+                      <span className="px-3 py-1 rounded-full bg-[#122e23] border border-amber-400/40 text-amber-300 text-xs font-medium">
+                        11:00 – 23:30 • Orario Continuato
+                      </span>
+                    ) : (
+                      <>
+                        <span className="px-2.5 py-1 rounded-lg bg-[#0e271d] border border-[#1b4d3e] text-amber-300 text-xs">
+                          Pranzo: {schedule.lunch}
+                        </span>
+                        <span className="px-2.5 py-1 rounded-lg bg-[#0e271d] border border-[#1b4d3e] text-[#a3c9b8] text-xs">
+                          Cena: {schedule.dinner}
+                        </span>
+                      </>
+                    )}
                   </div>
                 </div>
               ))}
