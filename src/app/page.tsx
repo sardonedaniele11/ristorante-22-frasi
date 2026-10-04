@@ -7,6 +7,7 @@ import SocialConnect from "@/components/SocialConnect";
 import ContactAndHours from "@/components/ContactAndHours";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import MobileBottomBar from "@/components/MobileBottomBar";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <MobileBottomBar />
     </div>
   );
 }

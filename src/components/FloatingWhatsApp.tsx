@@ -9,7 +9,7 @@ export default function FloatingWhatsApp() {
   )}`;
 
   return (
-    <aside aria-label="Contatto rapido WhatsApp" className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+    <aside aria-label="Contatto rapido WhatsApp" className="fixed bottom-6 right-6 z-40 hidden md:flex items-center gap-3">
       {/* Tooltip hint on hover */}
       <span className="hidden sm:inline-block bg-neutral-900/90 text-white text-xs px-3 py-1.5 rounded-full border border-neutral-700 shadow-xl backdrop-blur-md">
         Prenota o chiedi info
