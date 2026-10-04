@@ -13,17 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "22 Frasi | Ristorante & Cocktail Bar",
+  title: "22 Frasi | Il bistrò di Puglia - Specialità gastronomiche pugliesi",
   description:
-    "Benvenuti al Ristorante 22 Frasi. Cucina contemporanea, sapori autentici, signature cocktail e un'atmosfera elegante e conviviale. Prenota direttamente su WhatsApp.",
+    "22 Frasi - Il bistrò di Puglia. Specialità gastronomiche pugliesi, orecchiette, burrata fresca, capocollo di Martina Franca, bombette e grandi vini DOC. Prenota direttamente su WhatsApp.",
   keywords: [
     "22 Frasi",
-    "Ristorante 22 Frasi",
-    "Ristorante",
-    "Cocktail Bar",
+    "Il bistrò di Puglia",
+    "Specialità gastronomiche pugliesi",
+    "Bistrò pugliese",
+    "Burrata",
+    "Orecchiette",
+    "Capocollo",
+    "Bombette",
     "Prenotazione Tavolo WhatsApp",
-    "Cucina Italiana",
   ],
+  icons: {
+    icon: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
