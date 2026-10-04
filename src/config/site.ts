@@ -21,7 +21,8 @@ export const siteConfig = {
   contact: {
     phone: "+390802369792",
     phoneDisplay: "080 236 9792",
-    whatsapp: "390802369792", // WhatsApp collegato al numero del bistrò (aggiornabile se hanno un cellulare)
+    whatsapp: "393274135733", // Numero WhatsApp diretto per le prenotazioni (+39 327 413 5733)
+    whatsappDisplay: "+39 327 413 5733",
     whatsappDefaultMessage:
       "Ciao! Vorrei prenotare un tavolo presso 22 Frasi - Il bistrò di Puglia a Bari.",
     instagram: "https://www.instagram.com/22frasi.puglia/",

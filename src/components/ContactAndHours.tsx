@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { Clock, MapPin, Phone, Mail, Navigation } from "lucide-react";
+import { WhatsAppIcon } from "@/components/SocialIcons";
 
 export default function ContactAndHours() {
   return (
@@ -85,12 +86,31 @@ export default function ContactAndHours() {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <h5 className="font-semibold text-white">Telefono & Prenotazioni</h5>
+                    <h5 className="font-semibold text-white">Telefono Locale</h5>
                     <a
                       href={`tel:${siteConfig.contact.phone}`}
                       className="text-[#a3c9b8] hover:text-white transition-colors"
                     >
                       {siteConfig.contact.phoneDisplay}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-[#0e271d] text-emerald-400 border border-[#1b4d3e] mt-1">
+                    <WhatsAppIcon className="w-4 h-4 fill-emerald-400" />
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-white">WhatsApp Prenotazioni</h5>
+                    <a
+                      href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
+                        siteConfig.contact.whatsappDefaultMessage
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
+                    >
+                      {siteConfig.contact.whatsappDisplay}
                     </a>
                   </div>
                 </div>
