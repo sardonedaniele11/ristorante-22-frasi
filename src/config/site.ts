@@ -24,9 +24,9 @@ export const siteConfig = {
     whatsapp: "390802369792", // WhatsApp collegato al numero del bistrò (aggiornabile se hanno un cellulare)
     whatsappDefaultMessage:
       "Ciao! Vorrei prenotare un tavolo presso 22 Frasi - Il bistrò di Puglia a Bari.",
-    instagram: "https://www.instagram.com/explore/tags/22frasi/",
-    instagramHandle: "@22FraSi",
-    facebook: "https://www.facebook.com/22FraSi",
+    instagram: "https://www.instagram.com/22frasi.puglia/",
+    instagramHandle: "@22frasi.puglia",
+    facebook: "https://www.facebook.com/22FraSi/?locale=it_IT",
     facebookName: "22 FraSi - Il Bistrò di Puglia",
     email: "info@22frasi.it",
     address: "Via Nicolò Putignani, 144/A/B, 70121 Bari BA",
