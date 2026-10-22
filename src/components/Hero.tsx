@@ -15,7 +15,7 @@ export default function Hero() {
         <div
           className="w-full h-full bg-cover bg-center opacity-20 scale-105 transition-transform duration-1000"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=2000&q=80')`,
+            backgroundImage: `url('/images/locale/esterno-ingresso.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#07130e] via-[#07130e]/85 to-transparent" />

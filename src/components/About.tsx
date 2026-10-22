@@ -65,8 +65,8 @@ export default function About() {
           <div className="relative">
             <div className="relative h-[480px] sm:h-[540px] rounded-3xl overflow-hidden shadow-2xl border border-[#1b4d3e] bg-[#0e271d]">
               <Image
-                src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=80"
-                alt="Ambiente 22 Frasi - Il bistrò di Puglia"
+                src="/images/piatti/cortile-esterno-vista.jpg"
+                alt="Il cortile esterno di 22 Frasi - Il bistrò di Puglia, Bari"
                 fill
                 className="object-cover"
               />
