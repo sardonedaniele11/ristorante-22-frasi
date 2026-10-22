@@ -20,22 +20,21 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "22 Frasi | Il bistrò di Puglia - Specialità gastronomiche pugliesi",
+  title: "22 Frasi | Specialità Gastronomiche Pugliesi & Caffetteria - Bari",
   description:
-    "22 Frasi - Il bistrò di Puglia. Specialità gastronomiche pugliesi, orecchiette, burrata fresca, capocollo di Martina Franca, bombette e grandi vini DOC. Prenota direttamente su WhatsApp.",
+    "22 Frasi - Specialità Gastronomiche Pugliesi & Caffetteria a Bari (Via Putignani, 144). Primi caldi della tradizione, formule pausa pranzo da 5€, rosticceria, secondi di carne e pesce, caffetteria d'autore. Prenota su WhatsApp.",
   keywords: [
     "22 Frasi",
-    "Il bistrò di Puglia",
-    "Specialità gastronomiche pugliesi",
-    "Bistrò pugliese",
-    "Burrata",
-    "Orecchiette",
-    "Capocollo",
-    "Bombette",
-    "Prenotazione Tavolo WhatsApp",
+    "22 Frasi Bari",
+    "Specialità Gastronomiche Pugliesi",
+    "Caffetteria Bari",
+    "Formule Pranzo Bari",
+    "Riso patate e cozze Bari",
+    "Rosticceria barese",
+    "Via Putignani Bari",
   ],
   icons: {
-    icon: "/logo.jpg",
+    icon: "/images/logo-icon.svg",
   },
 };
 

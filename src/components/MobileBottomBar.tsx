@@ -1,7 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Utensils } from "lucide-react";
 import { WhatsAppIcon, InstagramIcon } from "@/components/SocialIcons";
 
 export default function MobileBottomBar() {
@@ -11,11 +11,20 @@ export default function MobileBottomBar() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#07130e]/95 backdrop-blur-lg border-t border-[#1b4d3e] px-3 py-2 shadow-2xl safe-area-bottom">
-      <div className="flex items-center justify-around gap-2 max-w-md mx-auto">
+      <div className="flex items-center justify-around gap-1.5 max-w-md mx-auto">
+        {/* Menù */}
+        <a
+          href="#menu"
+          className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
+        >
+          <Utensils className="w-5 h-5 text-amber-300 mb-0.5" />
+          <span className="text-[10px] font-medium tracking-tight">Menù</span>
+        </a>
+
         {/* Chiama */}
         <a
           href={`tel:${siteConfig.contact.phone}`}
-          className="flex-1 flex flex-col items-center justify-center py-1.5 px-2 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
+          className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
         >
           <Phone className="w-5 h-5 text-amber-300 mb-0.5" />
           <span className="text-[10px] font-medium tracking-tight">Chiama</span>

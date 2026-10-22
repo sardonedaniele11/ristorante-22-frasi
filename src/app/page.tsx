@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import MenuSection from "@/components/MenuSection";
 import Specialties from "@/components/Specialties";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <MenuSection />
         <Specialties />
         <About />
         <InstagramFeed />

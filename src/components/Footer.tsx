@@ -16,12 +16,12 @@ export default function Footer() {
           {/* Col 1: Brand & Logo */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-[#2a6d58] bg-[#16382b]">
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-[#2a6d58] bg-[#07130e] p-1 flex items-center justify-center">
                 <Image
-                  src={siteConfig.logo}
+                  src={siteConfig.logoIcon}
                   alt="Logo 22 Frasi"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <div>
@@ -29,7 +29,7 @@ export default function Footer() {
                   {siteConfig.name}
                 </span>
                 <span className="text-xs text-[#a3c9b8] font-medium block">
-                  {siteConfig.subtitle} • {siteConfig.descriptor}
+                  {siteConfig.subtitle}
                 </span>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Footer() {
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 className="w-10 h-10 rounded-full bg-[#0e271d] border border-[#1b4d3e] flex items-center justify-center text-amber-300 hover:border-amber-300 hover:bg-[#16382b] transition-colors"
-                title="Chiama"
+                title="Chiama Fisso"
               >
                 <Phone className="w-5 h-5" />
               </a>
@@ -82,6 +82,11 @@ export default function Footer() {
               Navigazione
             </h4>
             <ul className="space-y-2.5 text-sm">
+              <li>
+                <a href="#menu" className="text-amber-300 hover:text-amber-200 transition-colors font-medium">
+                  Il Menù &amp; Formule Pranzo
+                </a>
+              </li>
               <li>
                 <a href="#chi-siamo" className="hover:text-amber-300 transition-colors">
                   Il Bistrò

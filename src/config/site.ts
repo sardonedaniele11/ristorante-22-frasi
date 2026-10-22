@@ -8,19 +8,22 @@ export interface GalleryItem {
 
 export const siteConfig = {
   name: "22 Frasi",
-  subtitle: "Il bistrò di Puglia",
-  descriptor: "Specialità gastronomiche pugliesi",
-  tagline: "I sapori autentici della Puglia nel cuore del bistrò: tradizioni, convivialità e materie prime genuine.",
+  subtitle: "Specialità Gastronomiche Pugliesi & Caffetteria",
+  descriptor: "Il bistrò di Puglia",
+  tagline: "I sapori autentici della Puglia nel cuore di Bari: primi caldi della tradizione, formule pranzo, rosticceria e caffetteria d'autore.",
   description:
-    "Benvenuti da 22 Frasi - Il bistrò di Puglia. Un luogo speciale dove riscoprire il gusto verace della tradizione pugliese: orecchiette fresche, burrate e caciocavalli, capocollo di Martina Franca, bombette cotte a puntino, friselle croccanti e i grandi vini di Puglia.",
+    "Benvenuti da 22 Frasi - Specialità Gastronomiche Pugliesi & Caffetteria. Un luogo speciale a Bari dove gustare la vera tradizione: riso patate e cozze, orecchiette, lasagne, fritture di pesce, tagliate alla brace, rosticceria espressa e ricche formule pausa pranzo.",
 
-  // Logo
-  logo: "/logo.jpg",
+  // Logo Ufficiale Vettoriale dal Menù
+  logo: "/logo.svg",
+  logoIcon: "/images/logo-icon.svg",
 
   // Contatti e Social collegabili direttamente
   contact: {
     phone: "+390802369792",
     phoneDisplay: "080 236 9792",
+    phoneMobile: "+393337940295",
+    phoneMobileDisplay: "+39 333 794 0295",
     whatsapp: "393274135733", // Numero WhatsApp diretto per le prenotazioni (+39 327 413 5733)
     whatsappDisplay: "+39 327 413 5733",
     whatsappDefaultMessage:

@@ -19,31 +19,40 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo & Brand Identity */}
-          <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-[#2a6d58] shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#16382b]">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#07130e] border border-[#2a6d58] p-1 flex items-center justify-center">
               <Image
-                src={siteConfig.logo}
-                alt="22 Frasi - Il bistrò di Puglia"
+                src={siteConfig.logoIcon}
+                alt="22 Frasi Logo"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-serif tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors font-bold leading-tight">
-                {siteConfig.name}
+                22 FRASI
               </span>
-              <span className="text-[11px] sm:text-xs text-[#a3c9b8] font-medium tracking-tight">
-                {siteConfig.subtitle}
+              <span className="text-[10px] sm:text-[11px] text-[#a3c9b8] font-medium tracking-tight">
+                Specialità Gastronomiche Pugliesi
               </span>
-              <span className="hidden sm:block text-[9px] uppercase tracking-widest text-neutral-400 font-sans">
-                {siteConfig.descriptor}
+              <span className="text-[9px] uppercase tracking-widest text-amber-400 font-sans font-bold">
+                &amp; Caffetteria
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-7 text-sm font-medium tracking-wide">
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium tracking-wide">
+            <a
+              href="#menu"
+              className="text-amber-300 hover:text-amber-200 transition-colors font-semibold flex items-center gap-1.5"
+            >
+              <span>Il Menù</span>
+              <span className="px-1.5 py-0.5 rounded text-[9px] bg-amber-400/20 border border-amber-400/40 text-amber-300 uppercase">
+                Pranzo 5€
+              </span>
+            </a>
             <a
               href="#chi-siamo"
               className="text-neutral-200 hover:text-amber-300 transition-colors"
@@ -54,7 +63,7 @@ export default function Navbar() {
               href="#specialita"
               className="text-neutral-200 hover:text-amber-300 transition-colors"
             >
-              Specialità Pugliesi
+              Specialità
             </a>
             <a
               href="#galleria"
@@ -141,6 +150,14 @@ export default function Navbar() {
               {siteConfig.descriptor}
             </span>
           </div>
+          <a
+            href="#menu"
+            onClick={() => setIsOpen(false)}
+            className="block py-2 text-base text-amber-300 font-semibold hover:text-amber-200 border-b border-[#1b4d3e]/40 flex items-center justify-between"
+          >
+            <span>Il Menù &amp; Formule Pranzo</span>
+            <span className="text-[10px] px-2 py-0.5 rounded bg-amber-400 text-[#07130e] font-bold">5€ - 10€ - 14€</span>
+          </a>
           <a
             href="#chi-siamo"
             onClick={() => setIsOpen(false)}
