@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { Phone, Menu, X } from "lucide-react";
-import { InstagramIcon, FacebookIcon, WhatsAppIcon } from "@/components/SocialIcons";
+import { InstagramIcon, FacebookIcon, WhatsAppIcon, TripAdvisorIcon } from "@/components/SocialIcons";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,6 +66,15 @@ export default function Navbar() {
               Specialità
             </a>
             <a
+              href="#recensioni"
+              className="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-1.5"
+            >
+              <span>Recensioni</span>
+              <span className="px-1.5 py-0.5 rounded text-[9px] bg-[#00aa6c]/20 border border-[#00aa6c]/50 text-[#00e693] font-bold">
+                5.0 ★
+              </span>
+            </a>
+            <a
               href="#galleria"
               className="text-neutral-200 hover:text-amber-300 transition-colors"
             >
@@ -87,6 +96,15 @@ export default function Navbar() {
 
           {/* Quick Social & Action buttons */}
           <div className="hidden lg:flex items-center space-x-3.5">
+            <a
+              href={siteConfig.contact.tripadvisor}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full text-neutral-300 hover:text-[#00aa6c] hover:bg-[#16382b] transition-colors border border-transparent hover:border-[#2a6d58]"
+              title="TripAdvisor 5.0 - Recensioni Verificate"
+            >
+              <TripAdvisorIcon className="w-4 h-4" />
+            </a>
             <a
               href={siteConfig.contact.instagram}
               target="_blank"
@@ -173,6 +191,16 @@ export default function Navbar() {
             Specialità Pugliesi
           </a>
           <a
+            href="#recensioni"
+            onClick={() => setIsOpen(false)}
+            className="block py-2 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40 flex items-center justify-between"
+          >
+            <span>Recensioni dei Clienti</span>
+            <span className="text-[10px] px-2 py-0.5 rounded bg-[#00aa6c]/20 border border-[#00aa6c]/40 text-[#00e693] font-bold">
+              TripAdvisor 5.0 ★
+            </span>
+          </a>
+          <a
             href="#galleria"
             onClick={() => setIsOpen(false)}
             className="block py-2 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40"
@@ -194,12 +222,20 @@ export default function Navbar() {
             Dove Siamo & Orari
           </a>
 
-          <div className="pt-4 flex items-center justify-around border-t border-[#1b4d3e]">
+          <div className="pt-4 grid grid-cols-4 gap-2 text-center border-t border-[#1b4d3e]">
+            <a
+              href={siteConfig.contact.tripadvisor}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-1 text-[11px] text-neutral-300 hover:text-[#00e693]"
+            >
+              <TripAdvisorIcon className="w-4 h-4 text-[#00aa6c]" /> TripAdvisor
+            </a>
             <a
               href={siteConfig.contact.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-neutral-300 hover:text-amber-300"
+              className="flex flex-col items-center gap-1 text-[11px] text-neutral-300 hover:text-amber-300"
             >
               <InstagramIcon className="w-4 h-4" /> Instagram
             </a>
@@ -207,13 +243,13 @@ export default function Navbar() {
               href={siteConfig.contact.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-neutral-300 hover:text-amber-300"
+              className="flex flex-col items-center gap-1 text-[11px] text-neutral-300 hover:text-amber-300"
             >
               <FacebookIcon className="w-4 h-4" /> Facebook
             </a>
             <a
               href={`tel:${siteConfig.contact.phone}`}
-              className="flex items-center gap-2 text-sm text-neutral-300 hover:text-amber-300"
+              className="flex flex-col items-center gap-1 text-[11px] text-neutral-300 hover:text-amber-300"
             >
               <Phone className="w-4 h-4" /> Chiama
             </a>

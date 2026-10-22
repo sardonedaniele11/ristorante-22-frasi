@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import MenuSection from "@/components/MenuSection";
 import Specialties from "@/components/Specialties";
 import About from "@/components/About";
+import ReviewsSection from "@/components/ReviewsSection";
 import Gallery from "@/components/Gallery";
 import InstagramFeed from "@/components/InstagramFeed";
 import SocialConnect from "@/components/SocialConnect";
@@ -20,8 +21,9 @@ export default function Home() {
         <MenuSection />
         <Specialties />
         <About />
-        <InstagramFeed />
+        <ReviewsSection />
         <Gallery />
+        <InstagramFeed />
         <SocialConnect />
         <ContactAndHours />
       </main>

@@ -45,3 +45,16 @@ export function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) 
     </svg>
   );
 }
+
+export function TripAdvisorIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.2c1.47 0 2.86.38 4.07 1.05l-1.35 1.35a5.53 5.53 0 00-5.44 0L7.93 6.25A7.95 7.95 0 0112 5.2zm-5.5 4.3a3.5 3.5 0 110 7 3.5 3.5 0 010-7zm11 0a3.5 3.5 0 110 7 3.5 3.5 0 010-7zm-11 1.5a2 2 0 100 4 2 2 0 000-4zm11 0a2 2 0 100 4 2 2 0 000-4zm-5.5 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" />
+    </svg>
+  );
+}
+

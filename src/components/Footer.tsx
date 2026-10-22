@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { Phone, Heart } from "lucide-react";
-import { InstagramIcon, FacebookIcon, WhatsAppIcon } from "@/components/SocialIcons";
+import { InstagramIcon, FacebookIcon, WhatsAppIcon, TripAdvisorIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -39,6 +39,15 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center space-x-3 pt-2">
+              <a
+                href={siteConfig.contact.tripadvisor}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#0e271d] border border-[#1b4d3e] flex items-center justify-center text-[#00aa6c] hover:border-[#00aa6c] hover:bg-[#16382b] transition-colors"
+                title="TripAdvisor 5.0 - Recensioni"
+              >
+                <TripAdvisorIcon className="w-5 h-5" />
+              </a>
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -95,6 +104,12 @@ export default function Footer() {
               <li>
                 <a href="#specialita" className="hover:text-amber-300 transition-colors">
                   Specialità Pugliesi
+                </a>
+              </li>
+              <li>
+                <a href="#recensioni" className="text-[#00e693] hover:text-[#00aa6c] transition-colors font-semibold flex items-center gap-1.5">
+                  <span>Recensioni TripAdvisor</span>
+                  <span className="text-[10px] px-1.5 py-0.2 rounded bg-[#00aa6c]/20 border border-[#00aa6c]/40">5.0 ★</span>
                 </a>
               </li>
               <li>

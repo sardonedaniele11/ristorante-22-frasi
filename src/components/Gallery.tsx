@@ -11,10 +11,12 @@ export default function Gallery() {
 
   const categories = [
     { key: "tutti", label: "Tutte le Foto" },
-    { key: "specialita", label: "Specialità Pugliesi" },
-    { key: "taglieri", label: "Taglieri & Sfizi" },
-    { key: "ambiente", label: "Ambiente Bistrò" },
-    { key: "cantina", label: "Cantina & Vini" },
+    { key: "specialita", label: "Primi & Specialità Baresi" },
+    { key: "taglieri", label: "Taglieri Bedogni & Rosticceria" },
+    { key: "secondi", label: "Carni alla Brace & Pesce" },
+    { key: "ambiente", label: "Ambiente del Bistrò" },
+    { key: "cantina", label: "Cantina Vini" },
+    { key: "caffetteria", label: "Caffetteria & Dolci" },
   ];
 
   const filteredPhotos =
