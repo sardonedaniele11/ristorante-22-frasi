@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Phone, Heart } from "lucide-react";
+import { Phone, Heart, FileText, Download, Clock } from "lucide-react";
 import { InstagramIcon, FacebookIcon, WhatsAppIcon, TripAdvisorIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
@@ -11,13 +11,13 @@ export default function Footer() {
   )}`;
 
   return (
-    <footer className="bg-[#050f0b] border-t border-[#1b4d3e] text-neutral-400 py-16 pb-28 md:pb-16">
+    <footer className="bg-[#05110d] border-t border-[#1b4d3e] text-neutral-400 py-16 pb-28 md:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Col 1: Brand & Logo */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-[#2a6d58] bg-[#07130e] p-1 flex items-center justify-center">
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-[#2a6d58] bg-[#071712] p-1 flex items-center justify-center">
                 <Image
                   src={siteConfig.logoIcon}
                   alt="Logo 22 Frasi"
@@ -26,10 +26,13 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <span className="text-2xl font-serif font-bold text-amber-300 tracking-wider block">
+                <span className="text-2xl font-serif font-bold text-white tracking-wider block">
                   {siteConfig.name}
                 </span>
-                <span className="text-xs text-[#a3c9b8] font-medium block">
+                <span className="text-xs text-[#d89d42] font-semibold block uppercase tracking-wider">
+                  {siteConfig.subtitle}
+                </span>
+                <span className="text-[10px] text-[#a3c9b8] block">
                   {siteConfig.descriptor}
                 </span>
               </div>
@@ -44,7 +47,7 @@ export default function Footer() {
                 href={siteConfig.contact.tripadvisor}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#0e271d] border border-[#1b4d3e] flex items-center justify-center text-[#00aa6c] hover:border-[#00aa6c] hover:bg-[#16382b] transition-colors"
+                className="w-10 h-10 rounded-full bg-[#0d2821] border border-[#1b4d3e] flex items-center justify-center text-[#00aa6c] hover:border-[#00aa6c] hover:bg-[#16382b] transition-colors"
                 title="TripAdvisor 5.0 - Recensioni"
               >
                 <TripAdvisorIcon className="w-5 h-5" />
@@ -53,7 +56,7 @@ export default function Footer() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#0e271d] border border-[#1b4d3e] flex items-center justify-center text-emerald-400 hover:border-emerald-400 hover:bg-[#16382b] transition-colors"
+                className="w-10 h-10 rounded-full bg-[#0d2821] border border-[#1b4d3e] flex items-center justify-center text-emerald-400 hover:border-emerald-400 hover:bg-[#16382b] transition-colors"
                 title="WhatsApp"
               >
                 <WhatsAppIcon className="w-5 h-5" />
@@ -62,7 +65,7 @@ export default function Footer() {
                 href={siteConfig.contact.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#0e271d] border border-[#1b4d3e] flex items-center justify-center text-pink-400 hover:border-pink-400 hover:bg-[#16382b] transition-colors"
+                className="w-10 h-10 rounded-full bg-[#0d2821] border border-[#1b4d3e] flex items-center justify-center text-pink-400 hover:border-pink-400 hover:bg-[#16382b] transition-colors"
                 title="Instagram"
               >
                 <InstagramIcon className="w-5 h-5" />
@@ -71,17 +74,39 @@ export default function Footer() {
                 href={siteConfig.contact.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#0e271d] border border-[#1b4d3e] flex items-center justify-center text-blue-400 hover:border-blue-400 hover:bg-[#16382b] transition-colors"
+                className="w-10 h-10 rounded-full bg-[#0d2821] border border-[#1b4d3e] flex items-center justify-center text-blue-400 hover:border-blue-400 hover:bg-[#16382b] transition-colors"
                 title="Facebook"
               >
                 <FacebookIcon className="w-5 h-5" />
               </a>
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                className="w-10 h-10 rounded-full bg-[#0e271d] border border-[#1b4d3e] flex items-center justify-center text-amber-300 hover:border-amber-300 hover:bg-[#16382b] transition-colors"
+                className="w-10 h-10 rounded-full bg-[#0d2821] border border-[#1b4d3e] flex items-center justify-center text-[#d89d42] hover:border-[#d89d42] hover:bg-[#16382b] transition-colors"
                 title="Chiama Fisso"
               >
                 <Phone className="w-5 h-5" />
+              </a>
+            </div>
+
+            {/* Document Downloads */}
+            <div className="pt-3 flex flex-wrap gap-2 text-xs">
+              <a
+                href="/docs/22-FRASI-Flyer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#8c1d28]/30 border border-[#8c1d28]/60 text-rose-200 hover:text-white"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span>Flyer Pranzo (PDF)</span>
+              </a>
+              <a
+                href="/docs/22-Frasi-Menu-Sera.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0d2821] border border-[#1b4d3e] text-[#d89d42] hover:text-white"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span>Menù Serale (PDF)</span>
               </a>
             </div>
           </div>
@@ -93,8 +118,23 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/#chi-siamo" className="hover:text-amber-300 transition-colors">
-                  Il Bistrò
+                <Link href="/#formule-pranzo" className="text-[#d89d42] hover:text-amber-200 transition-colors font-medium">
+                  Formule Pranzo da 7€
+                </Link>
+              </li>
+              <li>
+                <Link href="/#menu" className="hover:text-white transition-colors">
+                  Menù Completo del Bistrò
+                </Link>
+              </li>
+              <li>
+                <Link href="/#chi-siamo" className="hover:text-white transition-colors">
+                  Il Manifesto di 22 Frasi
+                </Link>
+              </li>
+              <li>
+                <Link href="/#galleria" className="hover:text-white transition-colors">
+                  Galleria (Cibo &amp; Location)
                 </Link>
               </li>
               <li>
@@ -104,7 +144,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#orari-e-contatti" className="hover:text-amber-300 transition-colors">
+                <Link href="/#orari-e-contatti" className="hover:text-white transition-colors">
                   Dove Siamo &amp; Orari
                 </Link>
               </li>
@@ -118,8 +158,8 @@ export default function Footer() {
             </h4>
             <div className="space-y-2.5 text-sm">
               <p className="text-neutral-300">
-                Telefono:{" "}
-                <a href={`tel:${siteConfig.contact.phone}`} className="text-amber-300 hover:underline">
+                Telefono Fisso:{" "}
+                <a href={`tel:${siteConfig.contact.phone}`} className="text-[#d89d42] hover:underline">
                   {siteConfig.contact.phoneDisplay}
                 </a>
               </p>
@@ -129,16 +169,23 @@ export default function Footer() {
                   {siteConfig.contact.whatsappDisplay}
                 </a>
               </p>
-              <p className="text-[#a3c9b8]">{siteConfig.contact.address}</p>
+              <p className="text-[#a3c9b8] leading-relaxed">
+                {siteConfig.contact.address}
+              </p>
+              <p className="text-xs text-neutral-400 pt-1">
+                Lunedì – Venerdì: 11:00-14:30 / 19:30-23:00<br />
+                Sabato: 11:00-23:30 (Orario Continuato)<br />
+                Domenica: Chiuso
+              </p>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[#122e23] flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-4">
-          <p>© {currentYear} {siteConfig.name} - {siteConfig.descriptor}. Tutti i diritti riservati.</p>
+          <p>© {currentYear} {siteConfig.name} - {siteConfig.subtitle}. Tutti i diritti riservati.</p>
           <p className="flex items-center gap-1">
-            Realizzato con passione per la Puglia <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
+            Realizzato con passione per la Puglia <Heart className="w-3.5 h-3.5 text-[#8c1d28] fill-[#8c1d28]" />
           </p>
         </div>
       </div>

@@ -1,6 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import LunchFormulas from "@/components/LunchFormulas";
+import CompleteMenuSection from "@/components/CompleteMenuSection";
+import ManifestoSection from "@/components/ManifestoSection";
+import GallerySection from "@/components/GallerySection";
 import ReviewsSection from "@/components/ReviewsSection";
 import ContactAndHours from "@/components/ContactAndHours";
 import Footer from "@/components/Footer";
@@ -9,11 +12,14 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#07130e] text-neutral-100 flex flex-col font-sans selection:bg-amber-400 selection:text-[#07130e]">
+    <div className="min-h-screen bg-[#071712] text-neutral-100 flex flex-col font-sans selection:bg-[#d89d42] selection:text-[#07130e]">
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <About />
+        <LunchFormulas />
+        <CompleteMenuSection />
+        <ManifestoSection />
+        <GallerySection />
         <ReviewsSection />
         <ContactAndHours />
       </main>

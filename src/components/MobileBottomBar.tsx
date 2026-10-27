@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Phone, MapPin, HeartHandshake } from "lucide-react";
-import { WhatsAppIcon, TripAdvisorIcon } from "@/components/SocialIcons";
+import { Clock, Utensils, MapPin, Image as ImageIcon } from "lucide-react";
+import { WhatsAppIcon } from "@/components/SocialIcons";
 
 export default function MobileBottomBar() {
   const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
@@ -11,25 +11,25 @@ export default function MobileBottomBar() {
   )}`;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#07130e]/95 backdrop-blur-lg border-t border-[#1b4d3e] px-3 py-2 shadow-2xl safe-area-bottom">
-      <div className="flex items-center justify-around gap-1.5 max-w-md mx-auto">
-        {/* Il Bistrò */}
+    <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-[#071712]/95 backdrop-blur-lg border-t border-[#1b4d3e] px-2 py-2 shadow-2xl safe-area-bottom">
+      <div className="flex items-center justify-around gap-1 max-w-md mx-auto">
+        {/* Formule Pranzo */}
         <Link
-          href="/#chi-siamo"
-          className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
+          href="/#formule-pranzo"
+          className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#0e271d] transition-colors"
         >
-          <HeartHandshake className="w-5 h-5 text-amber-300 mb-0.5" />
-          <span className="text-[10px] font-medium tracking-tight">Il Bistrò</span>
+          <Clock className="w-5 h-5 text-[#8c1d28] mb-0.5" />
+          <span className="text-[10px] font-bold text-[#d89d42]">Pranzo 7€</span>
         </Link>
 
-        {/* Chiama */}
-        <a
-          href={`tel:${siteConfig.contact.phone}`}
-          className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
+        {/* Menù Completo */}
+        <Link
+          href="/#menu"
+          className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#0e271d] transition-colors"
         >
-          <Phone className="w-5 h-5 text-amber-300 mb-0.5" />
-          <span className="text-[10px] font-medium tracking-tight">Chiama</span>
-        </a>
+          <Utensils className="w-5 h-5 text-[#d89d42] mb-0.5" />
+          <span className="text-[10px] font-medium tracking-tight">Menù</span>
+        </Link>
 
         {/* WhatsApp (Pulsante Centrale in Evidenza) */}
         <a
@@ -42,13 +42,13 @@ export default function MobileBottomBar() {
           <span className="text-xs">Prenota</span>
         </a>
 
-        {/* Recensioni */}
+        {/* Galleria Foto */}
         <Link
-          href="/recensioni"
-          className="flex-1 flex flex-col items-center justify-center py-1.5 px-2 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
+          href="/#galleria"
+          className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#0e271d] transition-colors"
         >
-          <TripAdvisorIcon className="w-5 h-5 text-[#00e693] mb-0.5" />
-          <span className="text-[10px] font-medium tracking-tight">5.0 ★</span>
+          <ImageIcon className="w-5 h-5 text-[#007a68] mb-0.5" />
+          <span className="text-[10px] font-medium tracking-tight">Foto</span>
         </Link>
 
         {/* Dove Siamo */}
@@ -56,7 +56,7 @@ export default function MobileBottomBar() {
           href={siteConfig.contact.googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex flex-col items-center justify-center py-1.5 px-2 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
+          className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#0e271d] transition-colors"
         >
           <MapPin className="w-5 h-5 text-amber-300 mb-0.5" />
           <span className="text-[10px] font-medium tracking-tight">Mappa</span>

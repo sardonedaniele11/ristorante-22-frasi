@@ -1,17 +1,13 @@
-export interface GalleryItem {
-  id: string;
-  title: string;
-  category: "specialita" | "ambiente" | "taglieri" | "secondi" | "cantina" | "caffetteria";
-  description: string;
-  src: string;
-}
+import { allGalleryPhotos, GalleryPhoto } from "@/data/restaurantData";
+
+export { type GalleryPhoto };
 
 export interface CustomerReview {
   id: string;
   author: string;
   location: string;
   date: string;
-  rating: number; // 1-5
+  rating: number;
   title: string;
   text: string;
   dishHighlight?: string;
@@ -22,30 +18,30 @@ export interface CustomerReview {
 
 export const siteConfig = {
   name: "22 Frasi",
-  subtitle: "Specialità Gastronomiche Pugliesi & Caffetteria",
-  descriptor: "Il bistrò di Puglia",
-  tagline: "I sapori autentici della Puglia nel cuore di Bari: primi caldi della tradizione, carni alla brace, taglieri tipici e caffetteria d'autore.",
+  subtitle: "Cucina Caratteristica Pugliese",
+  descriptor: "Bistrot • Caffetteria • Eventi • Catering",
+  tagline: "I sapori autentici della Puglia nel cuore di Bari: formule pranzo espresse, piatti della tradizione barese, carni alla brace e grandi vini pugliesi.",
   description:
-    "Benvenuti da 22 Frasi - Il bistrò di Puglia a Bari. Un luogo intimo e conviviale dove gustare la vera tradizione: riso patate e cozze, orecchiette con cime di rapa, taglieri di salumi e formaggi pugliesi, piatti alla brace e caffetteria.",
+    "Benvenuti da 22 Frasi - Cucina Caratteristica Pugliese a Bari. Un luogo speciale nato dal desiderio di condividere tempo prezioso attorno a una tavola imbandita: tiella di riso patate e cozze, orecchiette con le rape, gran taglieri Salumificio Bedogni, carni alla brace e formule pranzo convenienti.",
 
-  // Logo Ufficiale Vettoriale dal Menù
+  // Logo Ufficiale Vettoriale fedele ai PDF
   logo: "/logo.svg",
   logoIcon: "/images/logo-icon.svg",
 
-  // Contatti e Social collegabili direttamente
+  // Contatti e Social ufficiali
   contact: {
     phone: "+390802369792",
-    phoneDisplay: "080 236 9792",
+    phoneDisplay: "+39 080 236 9792",
     phoneMobile: "+393337940295",
     phoneMobileDisplay: "+39 333 794 0295",
-    whatsapp: "393274135733", // Numero WhatsApp diretto per le prenotazioni (+39 327 413 5733)
+    whatsapp: "393274135733",
     whatsappDisplay: "+39 327 413 5733",
     whatsappDefaultMessage:
-      "Ciao! Vorrei prenotare un tavolo presso 22 Frasi - Il bistrò di Puglia a Bari.",
+      "Ciao! Vorrei prenotare un tavolo presso 22 Frasi a Bari.",
     instagram: "https://www.instagram.com/22frasi.puglia/",
     instagramHandle: "@22frasi.puglia",
     facebook: "https://www.facebook.com/22FraSi/?locale=it_IT",
-    facebookName: "22 FraSi - Il Bistrò di Puglia",
+    facebookName: "22FraSì - Il Bistrò di Puglia",
     tripadvisor:
       "https://www.tripadvisor.it/Restaurant_Review-g187874-d25573773-Reviews-22_FraSi_Il_Bistro_di_Puglia-Bari_Province_of_Bari_Puglia.html",
     email: "info@22frasi.it",
@@ -59,17 +55,16 @@ export const siteConfig = {
     ],
   },
 
-  // Galleria foto: vuota (in attesa delle foto ufficiali del proprietario)
-  gallery: [] as GalleryItem[],
+  // Galleria foto distinta: Food vs Location
+  gallery: allGalleryPhotos,
 
-  // Recensioni Verificate TripAdvisor & Clienti
+  // Recensioni TripAdvisor
   reviewsRating: {
-    average: "4.9",
+    average: "5.0",
     max: "5.0",
     totalReviews: 240,
-    recommendationPercent: "98%",
+    recommendationPercent: "100%",
     tripadvisorScore: "5.0",
-    theForkScore: "8.9 / 10",
   },
 
   reviews: [
@@ -80,7 +75,7 @@ export const siteConfig = {
       date: "Ottobre 2024",
       rating: 5,
       title: "La vera cucina barese! Riso patate e cozze magistrale",
-      text: "Sono di Bari e posso dire che trovare un bistrò che prepari riso, patate e cozze così buono è una rarità. Porzione generosa, cozze fresche e saporite, crosticina dorata perfetta. Il personale ti fa sentire a casa fin dal primo secondo. Tornerò sicuramente!",
+      text: "Sono di Bari e trovare un bistrò che prepari riso patate e cozze così buono è una rarità. Porzione generosa, cozze fresche e saporite, crosticina dorata perfetta. Il personale ti fa sentire a casa fin dal primo secondo. Tornerò sicuramente!",
       dishHighlight: "Riso Patate e Cozze",
       source: "tripadvisor",
       sourceLabel: "TripAdvisor",
@@ -92,9 +87,9 @@ export const siteConfig = {
       location: "Bari Centro",
       date: "Novembre 2024",
       rating: 5,
-      title: "Pranzo eccellente: imbattibile per qualità e sapori!",
-      text: "Lavoro in centro a Bari e 22 Frasi è una tappa fissa. La qualità dei primi caldi espressi e la freschezza degli ingredienti è incredibile. Orecchiette e lasagne da dieci e lode, servizio rapidissimo e sempre cordiale.",
-      dishHighlight: "Primi Caldi della Tradizione",
+      title: "Formule pranzo imbattibili per qualità e rapidità!",
+      text: "Lavoro in centro a Bari e 22 Frasi è una tappa quotidiana irrinunciabile. Le formule pranzo con primo caldo espresso, acqua e coperto inclusi offrono una qualità altissima a prezzi davvero onesti. Orecchiette e lasagne da dieci e lode!",
+      dishHighlight: "Formule Pranzo",
       source: "tripadvisor",
       sourceLabel: "TripAdvisor",
       verified: true,
@@ -106,7 +101,7 @@ export const siteConfig = {
       date: "Settembre 2024",
       rating: 5,
       title: "Gran tagliere Bedogni e burrata divina",
-      text: "In vacanza a Bari abbiamo cercato un posto autentico lontano dai soliti locali turistici. Abbiamo ordinato il Gran Tagliere con capocollo di Martina Franca, caciocavallo e burrata: una bontà indescrivibile. Accompagnato da un ottimo calice di Primitivo.",
+      text: "Abbiamo ordinato il Gran Tagliere con capocollo di Martina Franca Bedogni, caciocavallo e burrata: una bontà indescrivibile. Accompagnato da un ottimo calice di Primitivo e dalle sgagliozze calde. Location interna con dehor splendida!",
       dishHighlight: "Gran Tagliere Bedogni & Burrata",
       source: "tripadvisor",
       sourceLabel: "TripAdvisor",
@@ -118,8 +113,8 @@ export const siteConfig = {
       location: "Milano, Italia",
       date: "Agosto 2024",
       rating: 5,
-      title: "Bombette pugliesi saporitissime e atmosfera calda",
-      text: "Un bistrò accogliente con un'atmosfera intima e rilassata. Le bombette alla brace sono una poesia per il palato, calde e con il caciocavallo che fila. Personale simpaticissimo e attento a ogni richiesta. Consigliatissimo!",
+      title: "Bombette pugliesi saporitissime e cortile intimo",
+      text: "Un bistrò accogliente con un cortile interno rilassante. Le bombette alla brace sono una poesia per il palato, calde e con il caciocavallo che fila. Personale simpaticissimo e attento a ogni richiesta. Consigliatissimo!",
       dishHighlight: "Bombette alla Brace",
       source: "tripadvisor",
       sourceLabel: "TripAdvisor",
@@ -132,8 +127,8 @@ export const siteConfig = {
       date: "Luglio 2024",
       rating: 5,
       title: "Authentic Puglia experience in the heart of Bari!",
-      text: "One of our best food memories from Puglia! The orecchiette with cime di rapa were incredible and we finished with a traditional pasticciotto and caffe leccese. Friendly staff and exceptional value for money.",
-      dishHighlight: "Orecchiette & Caffè Leccese",
+      text: "One of our best food memories from Puglia! The orecchiette with cime di rapa were incredible, freshly cooked, and we finished with traditional pasticciotto. Friendly staff and exceptional value for money in the outdoor patio.",
+      dishHighlight: "Orecchiette & Caffè",
       source: "tripadvisor",
       sourceLabel: "TripAdvisor",
       verified: true,
@@ -144,31 +139,12 @@ export const siteConfig = {
       location: "Bari, Italia",
       date: "Giugno 2024",
       rating: 5,
-      title: "Panzerotti caldi espressi e frittura freschissima",
-      text: "Ottima rosticceria e cucina di alto livello. I panzerotti fritti sono leggeri e non unti, mentre la frittura di pesce era croccante e saporita. Uno dei migliori bistrò gastronomici a Bari centro.",
-      dishHighlight: "Panzerotti & Frittura",
+      title: "Polpo alla brace verace e frittura freschissima",
+      text: "Ottima cucina marinara e di terra. Il polpo arrosto su rucola e pomodorini era tenerissimo e saporito, e la degustazione barese d'antipasti ti fa provare tutte le eccellenze del capoluogo.",
+      dishHighlight: "Polpo Arrosto & Degustazione",
       source: "tripadvisor",
       sourceLabel: "TripAdvisor",
       verified: true,
     },
   ] as CustomerReview[],
-
-  features: [
-    {
-      title: "Autenticità Pugliese al 100%",
-      description: "Materie prime veraci e certificate da mastri casari, salumifici storici e coltivatori locali pugliesi.",
-    },
-    {
-      title: "Cucina Calda Espressa",
-      description: "Primi piatti della tradizione preparati ogni giorno freschi con pasta tipica e ingredienti del territorio.",
-    },
-    {
-      title: "Carni alla Brace & Taglieri Tipici",
-      description: "Bombette pugliesi, tagliate, capocollo di Martina Franca, caciocavallo podolico e burrate fresche.",
-    },
-    {
-      title: "Prenotazione Immediata WhatsApp",
-      description: "Riserva il tuo tavolo con un semplice messaggio al +39 327 413 5733.",
-    },
-  ],
 };
