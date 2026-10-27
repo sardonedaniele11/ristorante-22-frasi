@@ -4,16 +4,15 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import ReviewsSection from "@/components/ReviewsSection";
-import Gallery from "@/components/Gallery";
 import { siteConfig } from "@/config/site";
 import { TripAdvisorIcon, WhatsAppIcon } from "@/components/SocialIcons";
-import { Star, ShieldCheck, Award, MessageSquare, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Recensioni TripAdvisor & Foto | 22 Frasi - Il bistrò di Puglia (Bari)",
+  title: "Recensioni TripAdvisor | 22 Frasi - Il bistrò di Puglia (Bari)",
   description:
-    "Scopri cosa dicono di noi i clienti su TripAdvisor (5.0/5) e guarda tutte le foto dei piatti tipici e del nostro bistrò a Bari in Via Putignani.",
+    "Scopri cosa dicono di noi i clienti su TripAdvisor (5.0/5) e prenota il tuo tavolo da 22 Frasi - Il bistrò di Puglia a Bari in Via Putignani.",
 };
 
 export default function RecensioniPage() {
@@ -53,7 +52,7 @@ export default function RecensioniPage() {
             </h1>
 
             <p className="text-base sm:text-xl text-[#a3c9b8] max-w-2xl mx-auto font-light leading-relaxed mb-8">
-              La voce autentica di chi ha gustato il nostro riso patate e cozze, le orecchiette con le rape, i gran taglieri Bedogni e le nostre rinomate formule pranzo.
+              La voce autentica di chi ha gustato il nostro riso patate e cozze, le orecchiette, i gran taglieri di salumi e formaggi e le carni alla brace.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -61,10 +60,10 @@ export default function RecensioniPage() {
                 href={siteConfig.contact.tripadvisor}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00aa6c] hover:bg-[#00925d] text-white font-bold text-sm shadow-xl shadow-[#00aa6c]/30 hover:scale-105 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#00aa6c] hover:bg-[#00925d] text-white font-bold text-sm shadow-xl shadow-[#00aa6c]/30 hover:scale-105 transition-all"
               >
                 <TripAdvisorIcon className="w-5 h-5 text-white" />
-                <span>Visualizza la Nostra Pagina Ufficiale TripAdvisor</span>
+                <span>Visualizza su TripAdvisor</span>
               </a>
 
               <a
@@ -73,7 +72,7 @@ export default function RecensioniPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl hover:scale-105 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl hover:scale-105 transition-all"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-white" />
                 <span>Prenota su WhatsApp</span>
@@ -85,9 +84,6 @@ export default function RecensioniPage() {
         {/* Reviews Section with dynamic filter and cards */}
         <ReviewsSection />
 
-        {/* Full Gallery Section */}
-        <Gallery />
-
         {/* Highlights / Why people love 22 Frasi */}
         <section className="py-20 bg-[#0d221a]/60 border-t border-[#1b4d3e]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -96,7 +92,7 @@ export default function RecensioniPage() {
                 Perché i Clienti ci Danno <span className="text-amber-300 italic">5 Stelle</span>
               </h2>
               <p className="text-sm sm:text-base text-[#a3c9b8]">
-                Tre pilastri che rendono unica l&apos;esperienza da 22 Frasi - Il bistrò di Puglia a Bari.
+                I valori che rendono unica l&apos;esperienza da 22 Frasi - Il bistrò di Puglia a Bari.
               </p>
             </div>
 
@@ -115,13 +111,13 @@ export default function RecensioniPage() {
 
               <div className="p-6 rounded-2xl bg-[#07130e] border border-[#1b4d3e] text-center">
                 <div className="w-12 h-12 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center mx-auto mb-4 font-bold text-xl">
-                  💶
+                  🥩
                 </div>
                 <h3 className="font-serif font-bold text-white text-lg mb-2">
-                  Formule Pranzo da 5€
+                  Taglieri &amp; Brace Tipica
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
-                  Il miglior rapporto qualità-prezzo di Bari centro: un primo caldo espresso con acqua e coperto inclusi a soli 5€.
+                  Selezione di salumi e formaggi pugliesi, bombette alla brace, caciocavallo podolico e calici di grandi cantine pugliesi.
                 </p>
               </div>
 
@@ -133,7 +129,7 @@ export default function RecensioniPage() {
                   Accoglienza del Sud
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
-                  Un bistrò familiare dove ogni ospite è accolto con il sorriso, attenzioni autentiche e l&apos;ospitalità calorosa della nostra terra.
+                  Un bistrò accogliente dove ogni ospite è ricevuto con il sorriso, attenzioni autentiche e l&apos;ospitalità calorosa della nostra terra.
                 </p>
               </div>
             </div>

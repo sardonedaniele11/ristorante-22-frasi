@@ -125,13 +125,6 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Notice for uploading custom photos */}
-        <div className="mt-12 p-6 rounded-2xl bg-[#0e271d] border border-[#2a6d58] text-center max-w-2xl mx-auto shadow-md">
-          <p className="text-neutral-200 text-sm">
-            📸 <span className="font-semibold text-amber-300">Spazio pronto per le foto del bistrò:</span>{" "}
-            Tutte le immagini che ci invierai verranno caricate in alta definizione direttamente in questa galleria.
-          </p>
-        </div>
       </div>
 
       {/* Lightbox Modal */}

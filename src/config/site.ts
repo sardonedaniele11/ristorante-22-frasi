@@ -24,9 +24,9 @@ export const siteConfig = {
   name: "22 Frasi",
   subtitle: "Specialità Gastronomiche Pugliesi & Caffetteria",
   descriptor: "Il bistrò di Puglia",
-  tagline: "I sapori autentici della Puglia nel cuore di Bari: primi caldi della tradizione, formule pranzo da 5€, carni alla brace, rosticceria e caffetteria d'autore.",
+  tagline: "I sapori autentici della Puglia nel cuore di Bari: primi caldi della tradizione, carni alla brace, taglieri tipici e caffetteria d'autore.",
   description:
-    "Benvenuti da 22 Frasi - Specialità Gastronomiche Pugliesi & Caffetteria. Un luogo speciale a Bari dove gustare la vera tradizione: riso patate e cozze, orecchiette con cime di rapa, gran taglieri Bedogni, tagliate alla brace, rosticceria espressa e ricche formule pausa pranzo.",
+    "Benvenuti da 22 Frasi - Il bistrò di Puglia a Bari. Un luogo intimo e conviviale dove gustare la vera tradizione: riso patate e cozze, orecchiette con cime di rapa, taglieri di salumi e formaggi pugliesi, piatti alla brace e caffetteria.",
 
   // Logo Ufficiale Vettoriale dal Menù
   logo: "/logo.svg",
@@ -59,165 +59,8 @@ export const siteConfig = {
     ],
   },
 
-  // Foto reali del locale e piatti della tradizione
-  gallery: [
-    {
-      id: "locale-ingresso",
-      title: "L'Ingresso del Bistrò 22 Frasi",
-      category: "ambiente",
-      description: "La vetrina e l'ingresso accogliente in Via Nicolò Putignani 144 a Bari con il menù del giorno esposto.",
-      src: "/images/locale/esterno-ingresso.jpg",
-    },
-    {
-      id: "locale-dehor-giardino",
-      title: "Il Nostro Giardino & Dehor all'Aperto",
-      category: "ambiente",
-      description: "Il rilassante cortile interno attrezzato con grandi ombrelloni e tanto verde per gustare i piatti tipici all'aperto.",
-      src: "/images/locale/dehor-giardino.jpg",
-    },
-    {
-      id: "locale-sala-esterna",
-      title: "I Tavoli nel Cortile Riservato",
-      category: "ambiente",
-      description: "Un'oasi di tranquillità nel pieno centro di Bari, ideale sia per la pausa pranzo che per cene rilassanti.",
-      src: "/images/locale/sala-esterna-tavoli.jpg",
-    },
-    {
-      id: "locale-dettaglio-tavolo",
-      title: "Mise en Place & Dettaglio Bistrò",
-      category: "ambiente",
-      description: "Tavoli curati con calici e tovagliette della casa, circondati da piante e luci d'atmosfera.",
-      src: "/images/locale/dettaglio-tavolo-bistro.jpg",
-    },
-    {
-      id: "cortile-vista-aerea",
-      title: "Il Cortile all'Aperto — Vista Panoramica",
-      category: "ambiente",
-      description: "Il nostro esclusivo cortile privato nel centro di Bari, con grandi ombrelloni Peroni e tavoli eleganti pronti ad accogliervi.",
-      src: "/images/piatti/cortile-esterno-vista.jpg",
-    },
-    {
-      id: "riso-patate-cozze",
-      title: "Cozze Ripiene & Riso Patate e Cozze",
-      category: "specialita",
-      description: "Il duetto per eccellenza della cucina barese: cozze ripiene gratinate servite con il tradizionale riso, patate e cozze.",
-      src: "/images/piatti/cozze-riso-patate.jpg",
-    },
-    {
-      id: "casarecce-olive-capperi",
-      title: "Casarecce con Olive, Capperi e Pomodorini",
-      category: "specialita",
-      description: "Pasta fresca artigianale di grano duro pugliese condita con olive baresi, capperi saporiti e pomodorini del piennolo.",
-      src: "/images/piatti/casarecce-olive-capperi.jpg",
-    },
-    {
-      id: "fave-e-cicorie",
-      title: "Fave e Cicorie — Il Piatto Povero di Puglia",
-      category: "specialita",
-      description: "La ricetta contadina per eccellenza: puré di fave secche, cicorie selvatiche saltate in padella e pane tostato croccante.",
-      src: "/images/piatti/fave-cicorie-promo.jpg",
-    },
-    {
-      id: "primitivo-fave-cicorie",
-      title: "Primitivo di Salento & Fave e Cicorie",
-      category: "cantina",
-      description: "Il connubio perfetto: un calice di Primitivo Feudo Apuliano con le tradizionali fave e cicorie, sapori di Puglia che dialogano.",
-      src: "/images/piatti/primitivo-fave-cicorie.jpg",
-    },
-    {
-      id: "polpo-alla-griglia",
-      title: "Polpo alla Griglia con Rucola e Olive",
-      category: "secondi",
-      description: "Tentacolo di polpo verace grigliato alla perfezione, servito su letto di rucola fresca, pomodorini e olive baresi.",
-      src: "/images/piatti/polpo-alla-griglia.jpg",
-    },
-    {
-      id: "lasagna-frasi",
-      title: "Lasagna al Forno della Casa",
-      category: "specialita",
-      description: "Sfoglia fresca tirata a mano, stratificata con ragù lento, besciamella vellutata e abbondante parmigiano gratinato.",
-      src: "/images/piatti/lasagna-promo.jpg",
-    },
-
-    {
-      id: "burrata-pomodorini",
-      title: "Burrata d'Andria con Pomodorini & Basilico",
-      category: "specialita",
-      description: "Cuore morbidissimo e cremoso di stracciatella pugliese, pomodorini ciliegino pugliesi e giro di olio buono.",
-      src: "https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "cozze-ripiene",
-      title: "Cozze Ripiene al Sugo della Tradizione",
-      category: "specialita",
-      description: "Cozze baresi imbottite con uova, pane raffermo, pecorino e prezzemolo, cotte a fuoco lento nel pomodoro nostrano.",
-      src: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "gran-tagliere-bedogni",
-      title: "Gran Tagliere del Bistrò Bedogni",
-      category: "taglieri",
-      description: "Capocollo di Martina Franca, Prosciutto Crudo Bedogni, Caciocavallo podolico, nodini di mozzarella e tarallini baresi.",
-      src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "panzerotti-barresi",
-      title: "Panzerotti Baresi Fritti Espressi",
-      category: "taglieri",
-      description: "Dorati e croccanti all'esterno con cuore bollente e filante di mozzarella fior di latte e pomodoro.",
-      src: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "focaccia-barese",
-      title: "Focaccia Barese all'Olio Extravergine",
-      category: "taglieri",
-      description: "Impasto lievitato a lungo con patata, bordo croccante, pomodori spaccati a mano e origano del Gargano.",
-      src: "https://images.unsplash.com/photo-1579684947550-22e945225d9a?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "bombette-brace",
-      title: "Bombette Pugliesi Cotte alla Brace",
-      category: "secondi",
-      description: "Fagottini di capocollo di maiale farciti con caciocavallo saporito, pancetta e aromi della macchia mediterranea.",
-      src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "tagliata-scottona",
-      title: "Tagliata di Scottona & Entrecôte alla Brace",
-      category: "secondi",
-      description: "Carni pregiate frollate cotte sui carboni ardenti, servite con scaglie di pecorino e rucola fresca.",
-      src: "https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "frittura-pesce",
-      title: "Frittura Mista di Paranza e Calamari",
-      category: "secondi",
-      description: "Pesce freschissimo dell'Adriatico infarinato e fritto all'istante, leggero e croccante con spicchi di limone.",
-      src: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=1200&q=80",
-    },
-
-    {
-      id: "cantina-vini-pugliesi",
-      title: "Cantina Selezionata: Primitivo & Negroamaro",
-      category: "cantina",
-      description: "Calici e bottiglie delle migliori cantine della Puglia per esaltare ogni sapore di terra e di mare.",
-      src: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "caffe-leccese",
-      title: "Caffetteria d'Autore & Caffè Leccese",
-      category: "caffetteria",
-      description: "Espresso pugliese intenso, preparato a regola d'arte, oppure servito freddo con ghiaccio e latte di mandorla.",
-      src: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: "pasticciotto-leccese",
-      title: "Pasticciotto Pugliese Caldo alla Crema",
-      category: "caffetteria",
-      description: "Scrigno di pasta frolla fragrante ripieno di vellutata crema pasticcera, sfornato fragrante per colazione o fine pasto.",
-      src: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=80",
-    },
-  ] as GalleryItem[],
+  // Galleria foto: vuota (in attesa delle foto ufficiali del proprietario)
+  gallery: [] as GalleryItem[],
 
   // Recensioni Verificate TripAdvisor & Clienti
   reviewsRating: {
@@ -249,9 +92,9 @@ export const siteConfig = {
       location: "Bari Centro",
       date: "Novembre 2024",
       rating: 5,
-      title: "Formula pranzo a 5€: imbattibile per qualità e prezzo!",
-      text: "Lavoro in centro a Bari e 22 Frasi è la mia salvezza quotidiana. La formula pranzo da 5€ con primo caldissimo, acqua e coperto inclusi è incredibile per la qualità offerta. Orecchiette e lasagne da dieci e lode, servizio rapidissimo e cordiale.",
-      dishHighlight: "Formula Pranzo 5€",
+      title: "Pranzo eccellente: imbattibile per qualità e sapori!",
+      text: "Lavoro in centro a Bari e 22 Frasi è una tappa fissa. La qualità dei primi caldi espressi e la freschezza degli ingredienti è incredibile. Orecchiette e lasagne da dieci e lode, servizio rapidissimo e sempre cordiale.",
+      dishHighlight: "Primi Caldi della Tradizione",
       source: "tripadvisor",
       sourceLabel: "TripAdvisor",
       verified: true,
@@ -313,19 +156,19 @@ export const siteConfig = {
   features: [
     {
       title: "Autenticità Pugliese al 100%",
-      description: "Materie prime veraci e certificate da mastri casari, salumifici storici Bedogni e coltivatori locali pugliesi.",
+      description: "Materie prime veraci e certificate da mastri casari, salumifici storici e coltivatori locali pugliesi.",
     },
     {
-      title: "Formula Pausa Pranzo da 5€",
-      description: "Primo piatto espresso a scelta con acqua e coperto inclusi per una pausa gustosa, veloce e conveniente.",
+      title: "Cucina Calda Espressa",
+      description: "Primi piatti della tradizione preparati ogni giorno freschi con pasta tipica e ingredienti del territorio.",
     },
     {
-      title: "Carni alla Brace & Rosticceria Espressa",
-      description: "Bombette pugliesi, costate, tagliate, panzerotti fritti al minuto e specialità di mare preparate ogni giorno.",
+      title: "Carni alla Brace & Taglieri Tipici",
+      description: "Bombette pugliesi, tagliate, capocollo di Martina Franca, caciocavallo podolico e burrate fresche.",
     },
     {
       title: "Prenotazione Immediata WhatsApp",
-      description: "Riserva il tuo tavolo o ordina da asporto con un semplice messaggio al +39 327 413 5733.",
+      description: "Riserva il tuo tavolo con un semplice messaggio al +39 327 413 5733.",
     },
   ],
 };

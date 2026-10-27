@@ -1,12 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import MenuSection from "@/components/MenuSection";
-import Specialties from "@/components/Specialties";
 import About from "@/components/About";
 import ReviewsSection from "@/components/ReviewsSection";
-import Gallery from "@/components/Gallery";
-import InstagramFeed from "@/components/InstagramFeed";
-import SocialConnect from "@/components/SocialConnect";
 import ContactAndHours from "@/components/ContactAndHours";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -18,13 +13,8 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <MenuSection />
-        <Specialties />
         <About />
         <ReviewsSection />
-        <Gallery />
-        <InstagramFeed />
-        <SocialConnect />
         <ContactAndHours />
       </main>
       <Footer />

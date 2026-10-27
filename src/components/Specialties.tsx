@@ -1,35 +1,35 @@
-import { Sparkles, UtensilsCrossed, Flame, Grape, Wheat } from "lucide-react";
+import { Sparkles, UtensilsCrossed, Flame, Grape, Wheat, Fish } from "lucide-react";
 import Image from "next/image";
 
 export default function Specialties() {
   const specialties = [
     {
-      title: "I Latticini & Le Burrate",
-      subtitle: "Dal cuore della Murgia",
-      description: "Burrata di Andria IGP fresca di giornata, stracciatella filante, nodini e caciocavallo podolico stagionato.",
+      title: "Degustazione Barese della Casa",
+      subtitle: "Il benvenuto di 22 Frasi",
+      description: "Cozze ripiene, polpette al sugo, sgagliozze di polenta, riso patate e cozze: tutto il cuore della cucina barese in un unico assaggio.",
       icon: Sparkles,
-      image: "https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=800&q=80",
+      image: "/images/piatti/degustazione-barese.jpg",
     },
     {
-      title: "Pasta Fresca & Orecchiette",
-      subtitle: "Tradizione fatta a mano",
-      description: "Orecchiette con cime di rapa e acciughe, cavatelli con sugo pugliese e ricotte salate della tradizione.",
+      title: "Cozze Ripiene & Riso Patate e Cozze",
+      subtitle: "I simboli di Bari",
+      description: "Cozze imbottite gratinate nel pomodoro e il tiellone barese per eccellenza: riso, patate a fette e cozze nere cotte al forno.",
+      icon: Fish,
+      image: "/images/piatti/cozze-ripiene-riso.jpg",
+    },
+    {
+      title: "Gran Tagliere di Salumi Pugliesi",
+      subtitle: "Salumificio Bedogni & artigiani locali",
+      description: "Capocollo di Martina Franca, bresaola, prosciutto crudo, sgagliozze di polenta e bruschette: la tradizione norcina pugliese.",
       icon: Wheat,
-      image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+      image: "/images/piatti/gran-tagliere-salumi.jpg",
     },
     {
-      title: "Capocollo, Bombette & Brace",
-      subtitle: "I sapori della Valle d'Itria",
-      description: "Il celebre capocollo di Martina Franca e le irresistibili bombette ripiene di formaggio fondente.",
+      title: "Spiedini & Carni alla Brace",
+      subtitle: "Brace & Valle d'Itria",
+      description: "Filetti e spiedini di carne grigliati sulla brace viva, serviti su tagliere di legno con rucola, pomodorini e caciocavallo grattugiato.",
       icon: Flame,
-      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      title: "Focacce, Friselle & Vini DOC",
-      subtitle: "Primitivo & Negroamaro",
-      description: "Focaccia alta barese con pomodorini e olive baresane, friselle condite con olio EVO e grandi calici di Puglia.",
-      icon: Grape,
-      image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
+      image: "/images/piatti/spiedini-carne-brace.jpg",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function Specialties() {
             Le Specialità del <span className="text-amber-300 italic">Bistrò di Puglia</span>
           </h2>
           <p className="text-[#a3c9b8] text-base sm:text-lg">
-            Da 22 Frasi la cucina è un atto d’amore verso la Puglia: solo ingredienti genuini, ricette veraci e il calore di una tavola imbandita a festa.
+            Da 22 Frasi la cucina è un atto d&apos;amore verso la Puglia: solo ingredienti genuini, ricette veraci e il calore di una tavola imbandita a festa.
           </p>
         </div>
 
@@ -57,14 +57,14 @@ export default function Specialties() {
                 key={index}
                 className="group relative rounded-3xl overflow-hidden bg-[#0e271d] border border-[#1b4d3e] shadow-xl hover:border-amber-400/50 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="relative h-48 w-full overflow-hidden">
+                <div className="relative h-52 w-full overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e271d] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e271d] via-[#0e271d]/20 to-transparent" />
                   <div className="absolute top-3 right-3 p-2.5 rounded-xl bg-[#0a1b14]/80 backdrop-blur-sm text-amber-300 border border-[#1b4d3e]">
                     <Icon className="w-4 h-4" />
                   </div>

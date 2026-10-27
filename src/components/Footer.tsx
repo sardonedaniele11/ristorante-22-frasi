@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Phone, Heart } from "lucide-react";
 import { InstagramIcon, FacebookIcon, WhatsAppIcon, TripAdvisorIcon } from "@/components/SocialIcons";
@@ -29,7 +30,7 @@ export default function Footer() {
                   {siteConfig.name}
                 </span>
                 <span className="text-xs text-[#a3c9b8] font-medium block">
-                  {siteConfig.subtitle}
+                  {siteConfig.descriptor}
                 </span>
               </div>
             </div>
@@ -92,40 +93,20 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#menu" className="text-amber-300 hover:text-amber-200 transition-colors font-medium">
-                  Il Menù &amp; Formule Pranzo
-                </a>
-              </li>
-              <li>
-                <a href="#chi-siamo" className="hover:text-amber-300 transition-colors">
+                <Link href="/#chi-siamo" className="hover:text-amber-300 transition-colors">
                   Il Bistrò
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#specialita" className="hover:text-amber-300 transition-colors">
-                  Specialità Pugliesi
-                </a>
-              </li>
-              <li>
-                <a href="#recensioni" className="text-[#00e693] hover:text-[#00aa6c] transition-colors font-semibold flex items-center gap-1.5">
+                <Link href="/recensioni" className="text-[#00e693] hover:text-[#00aa6c] transition-colors font-semibold flex items-center gap-1.5">
                   <span>Recensioni TripAdvisor</span>
                   <span className="text-[10px] px-1.5 py-0.2 rounded bg-[#00aa6c]/20 border border-[#00aa6c]/40">5.0 ★</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#galleria" className="hover:text-amber-300 transition-colors">
-                  Galleria Foto
-                </a>
-              </li>
-              <li>
-                <a href="#social" className="hover:text-amber-300 transition-colors">
-                  Social & WhatsApp
-                </a>
-              </li>
-              <li>
-                <a href="#orari-e-contatti" className="hover:text-amber-300 transition-colors">
-                  Dove Siamo & Orari
-                </a>
+                <Link href="/#orari-e-contatti" className="hover:text-amber-300 transition-colors">
+                  Dove Siamo &amp; Orari
+                </Link>
               </li>
             </ul>
           </div>
@@ -133,7 +114,7 @@ export default function Footer() {
           {/* Col 3: Contatti Rapidi */}
           <div>
             <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
-              Prenotazioni & Info
+              Prenotazioni &amp; Info
             </h4>
             <div className="space-y-2.5 text-sm">
               <p className="text-neutral-300">
@@ -143,9 +124,9 @@ export default function Footer() {
                 </a>
               </p>
               <p className="text-neutral-300">
-                Email:{" "}
-                <a href={`mailto:${siteConfig.contact.email}`} className="text-amber-300 hover:underline">
-                  {siteConfig.contact.email}
+                WhatsApp:{" "}
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">
+                  {siteConfig.contact.whatsappDisplay}
                 </a>
               </p>
               <p className="text-[#a3c9b8]">{siteConfig.contact.address}</p>
@@ -155,7 +136,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[#122e23] flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-4">
-          <p>© {currentYear} {siteConfig.name} - {siteConfig.subtitle}. Tutti i diritti riservati.</p>
+          <p>© {currentYear} {siteConfig.name} - {siteConfig.descriptor}. Tutti i diritti riservati.</p>
           <p className="flex items-center gap-1">
             Realizzato con passione per la Puglia <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
           </p>

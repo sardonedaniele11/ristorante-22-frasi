@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Phone, MapPin, Utensils } from "lucide-react";
-import { WhatsAppIcon, InstagramIcon } from "@/components/SocialIcons";
+import { Phone, MapPin, HeartHandshake } from "lucide-react";
+import { WhatsAppIcon, TripAdvisorIcon } from "@/components/SocialIcons";
 
 export default function MobileBottomBar() {
   const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
@@ -12,14 +13,14 @@ export default function MobileBottomBar() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#07130e]/95 backdrop-blur-lg border-t border-[#1b4d3e] px-3 py-2 shadow-2xl safe-area-bottom">
       <div className="flex items-center justify-around gap-1.5 max-w-md mx-auto">
-        {/* Menù */}
-        <a
-          href="#menu"
+        {/* Il Bistrò */}
+        <Link
+          href="/#chi-siamo"
           className="flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
         >
-          <Utensils className="w-5 h-5 text-amber-300 mb-0.5" />
-          <span className="text-[10px] font-medium tracking-tight">Menù</span>
-        </a>
+          <HeartHandshake className="w-5 h-5 text-amber-300 mb-0.5" />
+          <span className="text-[10px] font-medium tracking-tight">Il Bistrò</span>
+        </Link>
 
         {/* Chiama */}
         <a
@@ -41,6 +42,15 @@ export default function MobileBottomBar() {
           <span className="text-xs">Prenota</span>
         </a>
 
+        {/* Recensioni */}
+        <Link
+          href="/recensioni"
+          className="flex-1 flex flex-col items-center justify-center py-1.5 px-2 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
+        >
+          <TripAdvisorIcon className="w-5 h-5 text-[#00e693] mb-0.5" />
+          <span className="text-[10px] font-medium tracking-tight">5.0 ★</span>
+        </Link>
+
         {/* Dove Siamo */}
         <a
           href={siteConfig.contact.googleMapsUrl}
@@ -50,17 +60,6 @@ export default function MobileBottomBar() {
         >
           <MapPin className="w-5 h-5 text-amber-300 mb-0.5" />
           <span className="text-[10px] font-medium tracking-tight">Mappa</span>
-        </a>
-
-        {/* Instagram */}
-        <a
-          href={siteConfig.contact.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 flex flex-col items-center justify-center py-1.5 px-2 rounded-xl text-neutral-200 active:bg-[#16382b] transition-colors"
-        >
-          <InstagramIcon className="w-5 h-5 text-pink-400 mb-0.5" />
-          <span className="text-[10px] font-medium tracking-tight">Social</span>
         </a>
       </div>
     </div>

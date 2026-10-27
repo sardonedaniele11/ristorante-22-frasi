@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo & Brand Identity */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#07130e] border border-[#2a6d58] p-1 flex items-center justify-center">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#07130e] border border-[#2a6d58] p-1 flex items-center justify-center">
               <Image
                 src={siteConfig.logoIcon}
                 alt="22 Frasi Logo"
@@ -34,64 +34,34 @@ export default function Navbar() {
                 22 FRASI
               </span>
               <span className="text-[10px] sm:text-[11px] text-[#a3c9b8] font-medium tracking-tight">
-                Specialità Gastronomiche Pugliesi
-              </span>
-              <span className="text-[9px] uppercase tracking-widest text-amber-400 font-sans font-bold">
-                &amp; Caffetteria
+                {siteConfig.descriptor}
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium tracking-wide">
-            <a
-              href="#menu"
-              className="text-amber-300 hover:text-amber-200 transition-colors font-semibold flex items-center gap-1.5"
-            >
-              <span>Il Menù</span>
-              <span className="px-1.5 py-0.5 rounded text-[9px] bg-amber-400/20 border border-amber-400/40 text-amber-300 uppercase">
-                Pranzo 5€
-              </span>
-            </a>
-            <a
-              href="#chi-siamo"
+          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+            <Link
+              href="/#chi-siamo"
               className="text-neutral-200 hover:text-amber-300 transition-colors"
             >
               Il Bistrò
-            </a>
-            <a
-              href="#specialita"
-              className="text-neutral-200 hover:text-amber-300 transition-colors"
-            >
-              Specialità
-            </a>
-            <a
-              href="#recensioni"
+            </Link>
+            <Link
+              href="/recensioni"
               className="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-1.5"
             >
               <span>Recensioni</span>
-              <span className="px-1.5 py-0.5 rounded text-[9px] bg-[#00aa6c]/20 border border-[#00aa6c]/50 text-[#00e693] font-bold">
+              <span className="px-1.5 py-0.5 rounded text-[10px] bg-[#00aa6c]/20 border border-[#00aa6c]/50 text-[#00e693] font-bold">
                 5.0 ★
               </span>
-            </a>
-            <a
-              href="#galleria"
+            </Link>
+            <Link
+              href="/#orari-e-contatti"
               className="text-neutral-200 hover:text-amber-300 transition-colors"
             >
-              Galleria Foto
-            </a>
-            <a
-              href="#social"
-              className="text-neutral-200 hover:text-amber-300 transition-colors"
-            >
-              Social & WhatsApp
-            </a>
-            <a
-              href="#orari-e-contatti"
-              className="text-neutral-200 hover:text-amber-300 transition-colors"
-            >
-              Dove Siamo & Orari
-            </a>
+              Dove Siamo &amp; Orari
+            </Link>
           </nav>
 
           {/* Quick Social & Action buttons */}
@@ -110,7 +80,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-full text-neutral-300 hover:text-amber-300 hover:bg-[#16382b] transition-colors border border-transparent hover:border-[#2a6d58]"
-              title="Seguici su Instagram"
+              title="Instagram"
             >
               <InstagramIcon className="w-4 h-4" />
             </a>
@@ -118,8 +88,8 @@ export default function Navbar() {
               href={siteConfig.contact.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-full text-neutral-300 hover:text-amber-300 hover:bg-[#16382b] transition-colors border border-transparent hover:border-[#2a6d58]"
-              title="Seguici su Facebook"
+              className="p-2.5 rounded-full text-neutral-300 hover:text-blue-400 hover:bg-[#16382b] transition-colors border border-transparent hover:border-[#2a6d58]"
+              title="Facebook"
             >
               <FacebookIcon className="w-4 h-4" />
             </a>
@@ -159,68 +129,40 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#0d221a]/98 border-b border-[#1b4d3e] px-4 pt-3 pb-6 space-y-4">
+        <div className="md:hidden bg-[#0d221a]/98 border-b border-[#1b4d3e] px-4 pt-3 pb-6 space-y-3">
           <div className="pb-2 border-b border-[#1b4d3e]/60">
             <span className="text-xs uppercase tracking-wider text-amber-300 font-semibold block">
-              {siteConfig.subtitle}
+              22 FRASI
             </span>
             <span className="text-[11px] text-neutral-300 block">
               {siteConfig.descriptor}
             </span>
           </div>
-          <a
-            href="#menu"
+
+          <Link
+            href="/#chi-siamo"
             onClick={() => setIsOpen(false)}
-            className="block py-2 text-base text-amber-300 font-semibold hover:text-amber-200 border-b border-[#1b4d3e]/40 flex items-center justify-between"
-          >
-            <span>Il Menù &amp; Formule Pranzo</span>
-            <span className="text-[10px] px-2 py-0.5 rounded bg-amber-400 text-[#07130e] font-bold">5€ - 10€ - 14€</span>
-          </a>
-          <a
-            href="#chi-siamo"
-            onClick={() => setIsOpen(false)}
-            className="block py-2 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40"
+            className="block py-2.5 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40"
           >
             Il Bistrò
-          </a>
-          <a
-            href="#specialita"
+          </Link>
+          <Link
+            href="/recensioni"
             onClick={() => setIsOpen(false)}
-            className="block py-2 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40"
-          >
-            Specialità Pugliesi
-          </a>
-          <a
-            href="#recensioni"
-            onClick={() => setIsOpen(false)}
-            className="block py-2 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40 flex items-center justify-between"
+            className="block py-2.5 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40 flex items-center justify-between"
           >
             <span>Recensioni dei Clienti</span>
             <span className="text-[10px] px-2 py-0.5 rounded bg-[#00aa6c]/20 border border-[#00aa6c]/40 text-[#00e693] font-bold">
               TripAdvisor 5.0 ★
             </span>
-          </a>
-          <a
-            href="#galleria"
+          </Link>
+          <Link
+            href="/#orari-e-contatti"
             onClick={() => setIsOpen(false)}
-            className="block py-2 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40"
+            className="block py-2.5 text-base text-neutral-200 hover:text-amber-300"
           >
-            Galleria Foto
-          </a>
-          <a
-            href="#social"
-            onClick={() => setIsOpen(false)}
-            className="block py-2 text-base text-neutral-200 hover:text-amber-300 border-b border-[#1b4d3e]/40"
-          >
-            Social & WhatsApp
-          </a>
-          <a
-            href="#orari-e-contatti"
-            onClick={() => setIsOpen(false)}
-            className="block py-2 text-base text-neutral-200 hover:text-amber-300"
-          >
-            Dove Siamo & Orari
-          </a>
+            Dove Siamo &amp; Orari
+          </Link>
 
           <div className="pt-4 grid grid-cols-4 gap-2 text-center border-t border-[#1b4d3e]">
             <a
@@ -243,7 +185,7 @@ export default function Navbar() {
               href={siteConfig.contact.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-1 text-[11px] text-neutral-300 hover:text-amber-300"
+              className="flex flex-col items-center gap-1 text-[11px] text-neutral-300 hover:text-blue-400"
             >
               <FacebookIcon className="w-4 h-4" /> Facebook
             </a>
