@@ -16,11 +16,11 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#071712]/95 backdrop-blur-md border-b border-[#1b4d3e]/80 text-neutral-100 transition-all shadow-xl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo & Brand Identity */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#0d2821] border border-[#2a6d58] p-1 flex items-center justify-center">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
+            <div className="relative w-9 h-9 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#0d2821] border border-[#2a6d58] p-1 flex items-center justify-center">
               <Image
                 src={siteConfig.logoIcon}
                 alt="22 Frasi Logo"
@@ -30,10 +30,10 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-serif tracking-wider text-white group-hover:text-[#d89d42] transition-colors font-bold leading-tight">
+              <span className="text-lg sm:text-2xl font-serif tracking-wider text-white group-hover:text-[#d89d42] transition-colors font-bold leading-none sm:leading-tight">
                 22 FRASI
               </span>
-              <span className="text-[10px] sm:text-[11px] text-[#d89d42] font-medium tracking-tight font-sans">
+              <span className="text-[9px] sm:text-[11px] text-[#d89d42] font-medium tracking-tight font-sans mt-0.5">
                 {siteConfig.subtitle}
               </span>
             </div>
@@ -63,6 +63,16 @@ export default function Navbar() {
               className="text-neutral-200 hover:text-[#d89d42] transition-colors"
             >
               Il Manifesto
+            </Link>
+
+            <Link
+              href="/#video"
+              className="text-neutral-200 hover:text-[#d89d42] transition-colors flex items-center gap-1"
+            >
+              <span>Video</span>
+              <span className="px-1.5 py-0.5 rounded text-[9px] bg-[#d89d42]/20 border border-[#d89d42]/40 text-[#d89d42] font-semibold uppercase">
+                Reel
+              </span>
             </Link>
 
             <Link
@@ -176,6 +186,17 @@ export default function Navbar() {
             className="block py-2.5 text-base text-neutral-200 hover:text-[#d89d42] border-b border-[#1b4d3e]/40"
           >
             Il Manifesto di 22 Frasi
+          </Link>
+
+          <Link
+            href="/#video"
+            onClick={() => setIsOpen(false)}
+            className="py-2.5 text-base text-neutral-200 hover:text-[#d89d42] border-b border-[#1b4d3e]/40 flex items-center justify-between"
+          >
+            <span>Video &amp; Atmosfera dal Bistrò</span>
+            <span className="text-[10px] px-2 py-0.5 rounded bg-[#d89d42]/20 border border-[#d89d42]/40 text-[#d89d42] font-bold">
+              3 Video
+            </span>
           </Link>
 
           <Link
