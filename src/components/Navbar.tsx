@@ -195,7 +195,7 @@ export default function Navbar() {
           >
             <span>Video &amp; Atmosfera dal Bistrò</span>
             <span className="text-[10px] px-2 py-0.5 rounded bg-[#d89d42]/20 border border-[#d89d42]/40 text-[#d89d42] font-bold">
-              3 Video
+              2 Video
             </span>
           </Link>
 

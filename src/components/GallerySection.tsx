@@ -13,27 +13,19 @@ export default function GallerySection() {
   const galleryVideos = [
     {
       id: "v-1",
-      title: "Atmosfera & Accoglienza",
-      category: "Ambiente",
-      description: "La cura dei dettagli, l'illuminazione calda e l'autentica ospitalità barese.",
+      title: "Creazioni & Piatti dello Chef",
+      category: "Cucina",
+      description: "La preparazione accurata e la dedizione per le materie prime fresche nel bistrò di Via Putignani.",
       src: "/videos/video-bistro-1.mp4",
       poster: "/videos/video-bistro-1-poster.jpg",
     },
     {
       id: "v-2",
-      title: "Il Nostro Cortile & Dehor",
-      category: "Spazio Esterno",
-      description: "Il giardino riservato di 22 Frasi nel cuore di Bari per pranzi e cene.",
+      title: "Bombette Pugliesi Artigianali",
+      category: "Tradizione",
+      description: "Involtini di carne fresca preparati a regola d'arte e pronti per la cottura sulla brace.",
       src: "/videos/video-bistro-2.mp4",
       poster: "/videos/video-bistro-2-poster.jpg",
-    },
-    {
-      id: "v-3",
-      title: "Cucina & Condivisione",
-      category: "Tradizione",
-      description: "Dalla tradizione dei primi piatti caldi alle portate preparate con materie prime pugliesi.",
-      src: "/videos/video-bistro-3.mp4",
-      poster: "/videos/video-bistro-3-poster.jpg",
     },
   ];
 
@@ -135,7 +127,7 @@ export default function GallerySection() {
               }`}
             >
               <Film className="w-3.5 h-3.5 shrink-0" />
-              <span>Video (3)</span>
+              <span>Video (2)</span>
             </button>
           </div>
         </div>
@@ -161,7 +153,7 @@ export default function GallerySection() {
 
         {/* Video Grid when activeTab === "video" */}
         {activeTab === "video" ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto mb-4">
             {galleryVideos.map((video) => (
               <div
                 key={video.id}

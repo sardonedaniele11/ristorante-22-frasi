@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { Sparkles, Play, Pause, VolumeX, Film, Eye } from "lucide-react";
+import { Sparkles, Play, Pause, VolumeX, Film } from "lucide-react";
 
 interface BistroVideo {
   id: string;
@@ -16,30 +16,21 @@ interface BistroVideo {
 const bistroVideos: BistroVideo[] = [
   {
     id: "video-1",
-    title: "Atmosfera & Accoglienza",
-    subtitle: "La vita nel bistrò",
-    description: "La cura dei dettagli, l'illuminazione calda e l'autentica ospitalità barese in Via Putignani.",
-    tag: "Ambiente & Relax",
+    title: "Creazioni & Piatti dello Chef",
+    subtitle: "Cucina Tipica Barese",
+    description: "La preparazione accurata e la dedizione per le materie prime fresche nel bistrò di Via Putignani.",
+    tag: "Cucina & Specialità",
     src: "/videos/video-bistro-1.mp4",
     poster: "/videos/video-bistro-1-poster.jpg",
   },
   {
     id: "video-2",
-    title: "Il Nostro Cortile & Dehor",
-    subtitle: "Tavoli all'aperto",
-    description: "Il giardino riservato di 22 Frasi: un'oasi di pace nel cuore di Bari per pranzi e cene.",
-    tag: "Spazio Esterno",
+    title: "Bombette Pugliesi Artigianali",
+    subtitle: "Fatte a Mano al Momento",
+    description: "La regina della tradizione pugliese: involtini di carne fresca preparati a regola d'arte per la brace.",
+    tag: "Bombette & Brace",
     src: "/videos/video-bistro-2.mp4",
     poster: "/videos/video-bistro-2-poster.jpg",
-  },
-  {
-    id: "video-3",
-    title: "Cucina & Condivisione",
-    subtitle: "Sapori tipici pugliesi",
-    description: "Dalla tradizione dei primi piatti caldi alle portate preparate con materie prime del territorio.",
-    tag: "Cucina Barese",
-    src: "/videos/video-bistro-3.mp4",
-    poster: "/videos/video-bistro-3-poster.jpg",
   },
 ];
 
@@ -47,7 +38,6 @@ export default function VideoSection() {
   const [playingStates, setPlayingStates] = useState<Record<string, boolean>>({
     "video-1": true,
     "video-2": true,
-    "video-3": true,
   });
 
   const videoRefs = useRef<Record<string, HTMLVideoElement | null>>({});
@@ -84,17 +74,17 @@ export default function VideoSection() {
           </h2>
 
           <p className="text-xs sm:text-base text-[#c2dfd3] font-light leading-relaxed max-w-lg mx-auto">
-            Brevi scorci dal nostro bistrò nel centro di Bari: il calore della sala, il dehor esterno e l&apos;amore per la tavola.
+            Scorci dalla nostra cucina nel centro di Bari: la preparazione delle celebri bombette e i piatti autentici della tradizione barese.
           </p>
 
           <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] text-[#a3c9b8] bg-[#0d2821]/80 px-3 py-1 rounded-full border border-[#1b4d3e]/70">
             <VolumeX className="w-3.5 h-3.5 text-[#d89d42]" />
-            <span>Video senza audio per una navigazione leggera e silenziosa</span>
+            <span>Video senza audio per una navigazione silenziosa e scorrevole</span>
           </div>
         </div>
 
-        {/* Video Reel Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 max-w-5xl mx-auto">
+        {/* Video Reel Cards Grid - 2 columns centered */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 max-w-3xl mx-auto">
           {bistroVideos.map((video) => {
             const isPlaying = playingStates[video.id] ?? true;
 
@@ -174,7 +164,7 @@ export default function VideoSection() {
                   <div className="mt-4 pt-3 border-t border-[#1b4d3e]/70 flex items-center justify-between text-[11px] text-[#a3c9b8]">
                     <span className="flex items-center gap-1">
                       <Sparkles className="w-3 h-3 text-[#d89d42]" />
-                      <span>Bistrò a Bari Centro</span>
+                      <span>22 Frasi • Bari Centro</span>
                     </span>
                     <button
                       onClick={() => togglePlay(video.id)}
