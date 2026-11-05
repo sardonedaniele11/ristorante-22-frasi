@@ -43,7 +43,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-xs sm:text-sm text-[#6d5644] font-serif italic mb-2.5 sm:mb-3 max-w-xl">
-          Primi caldi della tradizione • Formule Pranzo da 7€ • Dehor all&apos;aperto
+          Primi caldi della tradizione • Formule Pranzo • Dehor all&apos;aperto
         </p>
 
         {/* Fast Action Buttons: Prenota, Menù PDF, Dove Siamo */}
