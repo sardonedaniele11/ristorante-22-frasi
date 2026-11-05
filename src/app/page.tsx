@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CompactLunchFormulas from "@/components/CompactLunchFormulas";
+import ManifestoSection from "@/components/ManifestoSection";
 import ContactAndHours from "@/components/ContactAndHours";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -10,7 +11,7 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 export const metadata: Metadata = {
   title: "22 Frasi | Cucina Caratteristica Pugliese - Bari Centro",
   description:
-    "Bistrò tipico barese in Via Putignani, 144. Tradizione pugliese, giardino interno dehor, formule pranzo da 7€ e carni alla brace.",
+    "Bistrò tipico barese in Via Putignani, 144. Tradizione pugliese, giardino interno dehor, formule pranzo e carni alla brace.",
 };
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <main className="flex-1 pb-16 lg:pb-0">
         <Hero />
         <CompactLunchFormulas showPdfLink={true} />
+        <ManifestoSection />
         <ContactAndHours />
       </main>
       <Footer />

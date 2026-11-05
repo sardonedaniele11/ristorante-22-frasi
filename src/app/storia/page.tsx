@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function StoriaPage() {
   return (
-    <div className="min-h-screen bg-[#071712] text-neutral-100 flex flex-col font-sans selection:bg-[#d89d42] selection:text-[#07130e]">
+    <div className="min-h-screen bg-[#fbf8f2] text-[#26170d] flex flex-col font-sans selection:bg-[#d89d42] selection:text-white">
       <Navbar />
 
       <main className="flex-1 pb-16 lg:pb-0">

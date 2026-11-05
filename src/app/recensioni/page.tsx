@@ -17,23 +17,23 @@ export const metadata: Metadata = {
 
 export default function RecensioniPage() {
   return (
-    <div className="min-h-screen bg-[#071712] text-neutral-100 flex flex-col font-sans selection:bg-[#d89d42] selection:text-[#07130e]">
+    <div className="min-h-screen bg-[#fbf8f2] text-[#26170d] flex flex-col font-sans selection:bg-[#d89d42] selection:text-white">
       <Navbar />
 
       <main className="flex-1">
         {/* Breadcrumb / Top bar */}
-        <div className="bg-[#0a1f19] border-b border-[#1b4d3e]/60 py-4 px-4 sm:px-8">
+        <div className="bg-[#f4ecdf] border-b border-[#dfcfb9] py-3 px-4 sm:px-8">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-xs sm:text-sm text-[#a3c9b8] hover:text-[#d89d42] transition-colors font-medium"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm text-[#8c1d28] hover:text-[#5a1017] transition-colors font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Torna alla Homepage</span>
             </Link>
 
-            <div className="flex items-center gap-2 text-xs text-neutral-300">
-              <span className="w-2 h-2 rounded-full bg-[#00aa6c] animate-pulse" />
+            <div className="flex items-center gap-2 text-xs text-[#6d5644]">
+              <span className="w-2 h-2 rounded-full bg-[#00aa6c]" />
               <span>TripAdvisor: Valutazione 5.0 / 5.0</span>
             </div>
           </div>
