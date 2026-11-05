@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import ReviewsSection from "@/components/ReviewsSection";
-import GallerySection from "@/components/GallerySection";
 import { siteConfig } from "@/config/site";
 import { TripAdvisorIcon, WhatsAppIcon } from "@/components/SocialIcons";
 import { ArrowLeft } from "lucide-react";
@@ -84,9 +83,6 @@ export default function RecensioniPage() {
 
         {/* Reviews Section */}
         <ReviewsSection />
-
-        {/* Full Gallery with Food vs Location tabs */}
-        <GallerySection />
       </main>
 
       <Footer />

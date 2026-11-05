@@ -42,45 +42,37 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium tracking-wide">
             <Link
-              href="/#formule-pranzo"
+              href="/"
+              className="text-neutral-200 hover:text-[#d89d42] transition-colors"
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/menu"
               className="text-[#d89d42] hover:text-amber-200 transition-colors font-bold flex items-center gap-1.5"
             >
-              <span>Formule Pranzo</span>
+              <span>Menù &amp; Pranzo</span>
               <span className="px-1.5 py-0.5 rounded text-[10px] bg-[#8c1d28] text-white font-mono uppercase tracking-wider">
-                Da 7€
+                PDF
               </span>
             </Link>
 
             <Link
-              href="/#menu"
+              href="/storia"
               className="text-neutral-200 hover:text-[#d89d42] transition-colors"
             >
-              Menù Completo
+              Storia di 22 Frasi
             </Link>
 
             <Link
-              href="/#chi-siamo"
-              className="text-neutral-200 hover:text-[#d89d42] transition-colors"
-            >
-              Il Manifesto
-            </Link>
-
-            <Link
-              href="/#video"
+              href="/esperienza"
               className="text-neutral-200 hover:text-[#d89d42] transition-colors flex items-center gap-1"
             >
-              <span>Video</span>
-              <span className="px-1.5 py-0.5 rounded text-[9px] bg-[#d89d42]/20 border border-[#d89d42]/40 text-[#d89d42] font-semibold uppercase">
-                Reel
+              <span>Vivi l&apos;Esperienza</span>
+              <span className="px-1.5 py-0.5 rounded text-[9px] bg-[#007a68]/40 border border-[#007a68] text-[#a3c9b8] font-semibold uppercase">
+                Video &amp; Foto
               </span>
-            </Link>
-
-            <Link
-              href="/#galleria"
-              className="text-neutral-200 hover:text-[#d89d42] transition-colors flex items-center gap-1"
-            >
-              <span>Galleria</span>
-              <span className="text-[10px] text-[#a3c9b8]">(Cibo &amp; Locale)</span>
             </Link>
 
             <Link
@@ -97,7 +89,7 @@ export default function Navbar() {
               href="/#orari-e-contatti"
               className="text-neutral-200 hover:text-[#d89d42] transition-colors"
             >
-              Dove Siamo &amp; Orari
+              Orari &amp; Contatti
             </Link>
           </nav>
 
@@ -164,47 +156,39 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/#formule-pranzo"
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="block py-2.5 text-base text-neutral-200 hover:text-[#d89d42] border-b border-[#1b4d3e]/40"
+          >
+            Home (Benvenuti &amp; Orari)
+          </Link>
+
+          <Link
+            href="/menu"
             onClick={() => setIsOpen(false)}
             className="py-2.5 text-base text-[#d89d42] font-bold hover:text-amber-200 border-b border-[#1b4d3e]/40 flex items-center justify-between"
           >
-            <span>Formule Pranzo</span>
-            <span className="text-[11px] px-2 py-0.5 rounded bg-[#8c1d28] text-white">Da 7€</span>
+            <span>Menù &amp; Formule Pranzo</span>
+            <span className="text-[11px] px-2 py-0.5 rounded bg-[#8c1d28] text-white">PDF &amp; 7€</span>
           </Link>
 
           <Link
-            href="/#menu"
+            href="/storia"
             onClick={() => setIsOpen(false)}
             className="block py-2.5 text-base text-neutral-200 hover:text-[#d89d42] border-b border-[#1b4d3e]/40"
           >
-            Menù Completo del Bistrò
+            Storia di 22 Frasi (Manifesto)
           </Link>
 
           <Link
-            href="/#chi-siamo"
-            onClick={() => setIsOpen(false)}
-            className="block py-2.5 text-base text-neutral-200 hover:text-[#d89d42] border-b border-[#1b4d3e]/40"
-          >
-            Il Manifesto di 22 Frasi
-          </Link>
-
-          <Link
-            href="/#video"
+            href="/esperienza"
             onClick={() => setIsOpen(false)}
             className="py-2.5 text-base text-neutral-200 hover:text-[#d89d42] border-b border-[#1b4d3e]/40 flex items-center justify-between"
           >
-            <span>Video &amp; Atmosfera dal Bistrò</span>
-            <span className="text-[10px] px-2 py-0.5 rounded bg-[#d89d42]/20 border border-[#d89d42]/40 text-[#d89d42] font-bold">
-              2 Video
+            <span>Vivi l&apos;Esperienza 22 Frasi</span>
+            <span className="text-[10px] px-2 py-0.5 rounded bg-[#007a68]/40 border border-[#007a68] text-[#a3c9b8] font-bold">
+              Video &amp; Foto
             </span>
-          </Link>
-
-          <Link
-            href="/#galleria"
-            onClick={() => setIsOpen(false)}
-            className="block py-2.5 text-base text-neutral-200 hover:text-[#d89d42] border-b border-[#1b4d3e]/40"
-          >
-            Galleria (Cibo &amp; Location)
           </Link>
 
           <Link
@@ -212,9 +196,9 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="py-2.5 text-base text-neutral-200 hover:text-[#d89d42] border-b border-[#1b4d3e]/40 flex items-center justify-between"
           >
-            <span>Recensioni dei Clienti</span>
+            <span>Recensioni TripAdvisor</span>
             <span className="text-[10px] px-2 py-0.5 rounded bg-[#00aa6c]/20 border border-[#00aa6c]/40 text-[#00e693] font-bold">
-              5.0 ★ TripAdvisor
+              5.0 ★
             </span>
           </Link>
 

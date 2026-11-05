@@ -1,15 +1,16 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import LunchFormulas from "@/components/LunchFormulas";
-import CompleteMenuSection from "@/components/CompleteMenuSection";
-import ManifestoSection from "@/components/ManifestoSection";
-import GallerySection from "@/components/GallerySection";
-import VideoSection from "@/components/VideoSection";
-import ReviewsSection from "@/components/ReviewsSection";
 import ContactAndHours from "@/components/ContactAndHours";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MobileBottomBar from "@/components/MobileBottomBar";
+
+export const metadata: Metadata = {
+  title: "22 Frasi | Cucina Caratteristica Pugliese - Bari Centro",
+  description:
+    "Bistrò tipico barese in Via Putignani, 144. Tradizione pugliese, giardino interno dehor, formule pranzo e carni alla brace.",
+};
 
 export default function Home() {
   return (
@@ -17,12 +18,6 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 pb-16 lg:pb-0">
         <Hero />
-        <LunchFormulas />
-        <CompleteMenuSection />
-        <ManifestoSection />
-        <VideoSection />
-        <GallerySection />
-        <ReviewsSection />
         <ContactAndHours />
       </main>
       <Footer />

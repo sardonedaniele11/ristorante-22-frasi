@@ -58,24 +58,24 @@ export default function Hero() {
           Benvenuti nel bistrò dove il cibo è condivisione, tempo dedicato e calore di casa. Dalla vera degustazione barese alle formule veloci per la pausa pranzo, con cortile esterno riservato.
         </p>
 
-        {/* CTA Buttons - Optimized for Mobile Grid */}
+        {/* CTA Buttons - Links to Dedicated Pages */}
         <div className="w-full max-w-md sm:max-w-none mb-8 sm:mb-12">
           <div className="grid grid-cols-2 sm:flex sm:flex-row items-center justify-center gap-2 sm:gap-3.5 mb-2 sm:mb-3">
-            <a
-              href="#formule-pranzo"
+            <Link
+              href="/menu"
               className="inline-flex items-center justify-center gap-1.5 bg-[#8c1d28] hover:bg-[#a12330] text-white font-bold text-xs sm:text-base px-3 sm:px-7 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-[#8c1d28]/30 transition-all text-center"
             >
               <Clock className="w-3.5 h-3.5 text-rose-300 shrink-0" />
               <span>Pranzo da 7€</span>
-            </a>
+            </Link>
 
-            <a
-              href="#menu"
+            <Link
+              href="/menu"
               className="inline-flex items-center justify-center gap-1.5 bg-[#d89d42] hover:bg-[#e6ab4e] text-[#07130e] font-bold text-xs sm:text-base px-3 sm:px-7 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-[#d89d42]/20 transition-all text-center"
             >
               <Utensils className="w-3.5 h-3.5 text-[#07130e] shrink-0" />
-              <span>Menù Completo</span>
-            </a>
+              <span>Menù e PDF</span>
+            </Link>
           </div>
 
           <div className="flex justify-center">
