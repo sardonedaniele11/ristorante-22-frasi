@@ -24,9 +24,9 @@ export const siteConfig = {
   description:
     "Benvenuti da 22 Frasi - Cucina Caratteristica Pugliese a Bari. Un luogo speciale nato dal desiderio di condividere tempo prezioso attorno a una tavola imbandita: tiella di riso patate e cozze, orecchiette con le rape, gran taglieri Salumificio Bedogni, carni alla brace e formule pranzo convenienti.",
 
-  // Logo Ufficiale Vettoriale fedele ai PDF
-  logo: "/logo.svg",
-  logoIcon: "/images/logo-icon.svg",
+  // Logo Ufficiale ad alta risoluzione fornito
+  logo: "/images/logo-clean.png",
+  logoIcon: "/images/logo-clean.png",
 
   // Contatti e Social ufficiali
   contact: {

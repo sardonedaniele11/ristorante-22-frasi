@@ -56,44 +56,40 @@ export default function VideoSection() {
   };
 
   return (
-    <section id="video" className="py-12 sm:py-24 bg-[#07130e] text-neutral-100 relative overflow-hidden">
-      {/* Background ambiance glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#007a68]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-[#8c1d28]/10 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
+    <section id="video" className="py-10 sm:py-16 bg-[#fbf8f2] text-[#26170d] relative overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#164e43]/60 border border-[#2a6d58] text-[#d89d42] text-[10px] sm:text-xs uppercase tracking-widest font-semibold mb-3 shadow-sm">
-            <Film className="w-3.5 h-3.5 text-[#d89d42]" />
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f2e7d5] border border-[#d6be9f] text-[#8c1d28] text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-3 shadow-xs">
+            <Film className="w-3.5 h-3.5 text-[#8c1d28]" />
             <span>Video &amp; Atmosfera dal Vivo</span>
           </div>
 
-          <h2 className="text-2xl sm:text-5xl font-serif font-bold text-white tracking-tight mb-2 sm:mb-3">
-            Vivi l&apos;Esperienza <span className="text-[#d89d42] italic">22 Frasi</span>
+          <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#26170d] tracking-tight mb-2 sm:mb-3">
+            Vivi l&apos;Esperienza <span className="text-[#8c1d28] italic">22 Frasi</span>
           </h2>
 
-          <p className="text-xs sm:text-base text-[#c2dfd3] font-light leading-relaxed max-w-lg mx-auto">
+          <p className="text-xs sm:text-sm text-[#6d5644] font-light leading-relaxed max-w-lg mx-auto">
             Scorci dalla nostra cucina nel centro di Bari: la preparazione delle celebri bombette e i piatti autentici della tradizione barese.
           </p>
 
-          <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] text-[#a3c9b8] bg-[#0d2821]/80 px-3 py-1 rounded-full border border-[#1b4d3e]/70">
-            <VolumeX className="w-3.5 h-3.5 text-[#d89d42]" />
+          <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] text-[#6d5644] bg-white px-3 py-1 rounded-full border border-[#dfcfb9] shadow-xs">
+            <VolumeX className="w-3.5 h-3.5 text-[#8c1d28]" />
             <span>Video senza audio per una navigazione silenziosa e scorrevole</span>
           </div>
         </div>
 
-        {/* Video Reel Cards Grid - 2 columns centered */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 max-w-3xl mx-auto">
+        {/* Video Reel Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl mx-auto">
           {bistroVideos.map((video) => {
             const isPlaying = playingStates[video.id] ?? true;
 
             return (
               <div
                 key={video.id}
-                className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0a1f19] border border-[#1b4d3e] hover:border-[#d89d42] shadow-xl transition-all duration-300 flex flex-col"
+                className="group relative rounded-2xl overflow-hidden bg-white border border-[#dfcfb9] hover:border-[#8c1d28] shadow-sm transition-all duration-300 flex flex-col"
               >
-                {/* Vertical Video Container (approx 9:16) */}
+                {/* Vertical Video Container */}
                 <div
                   className="relative aspect-[9/15] sm:aspect-[9/16] w-full bg-black overflow-hidden cursor-pointer select-none"
                   onClick={() => togglePlay(video.id)}
@@ -114,22 +110,19 @@ export default function VideoSection() {
 
                   {/* Top Badges */}
                   <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
-                    <span className="px-2.5 py-1 rounded-full bg-[#071712]/85 backdrop-blur-md border border-[#2a6d58] text-[10px] font-mono uppercase tracking-wider text-[#d89d42] shadow">
+                    <span className="px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-md border border-[#dfcfb9] text-[10px] font-mono uppercase tracking-wider text-[#8c1d28] font-bold shadow-xs">
                       {video.tag}
                     </span>
 
-                    <span className="p-1.5 rounded-full bg-black/60 backdrop-blur-md text-[#a3c9b8] border border-white/10" title="Senza audio">
-                      <VolumeX className="w-3.5 h-3.5 text-neutral-300" />
+                    <span className="p-1.5 rounded-full bg-black/60 backdrop-blur-md text-white border border-white/10" title="Senza audio">
+                      <VolumeX className="w-3.5 h-3.5" />
                     </span>
                   </div>
-
-                  {/* Gradient bottom overlay for text legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f19] via-transparent to-black/20 pointer-events-none" />
 
                   {/* Play / Pause indicator button */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div
-                      className={`w-12 h-12 rounded-full bg-black/60 backdrop-blur-md border border-[#d89d42]/50 text-white flex items-center justify-center transition-all duration-300 shadow-xl ${
+                      className={`w-12 h-12 rounded-full bg-black/60 backdrop-blur-md border border-[#d89d42]/70 text-white flex items-center justify-center transition-all duration-300 shadow-xl ${
                         isPlaying ? "opacity-0 group-hover:opacity-85" : "opacity-95 scale-110"
                       }`}
                     >
@@ -140,35 +133,30 @@ export default function VideoSection() {
                       )}
                     </div>
                   </div>
-
-                  {/* Subtle tap helper for mobile */}
-                  <div className="absolute bottom-3 right-3 text-[10px] text-white/70 bg-black/50 px-2 py-0.5 rounded-md pointer-events-none sm:hidden">
-                    {isPlaying ? "Tocca per fermare" : "Tocca per avviare"}
-                  </div>
                 </div>
 
                 {/* Card Info Details */}
-                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-[#0a1f19]">
+                <div className="p-4 flex-1 flex flex-col justify-between bg-white">
                   <div>
-                    <span className="text-[10px] font-serif uppercase tracking-widest text-[#d89d42] block mb-1">
+                    <span className="text-[10px] font-serif uppercase tracking-widest text-[#8c1d28] font-bold block mb-1">
                       {video.subtitle}
                     </span>
-                    <h3 className="text-base sm:text-lg font-serif font-bold text-white mb-2 leading-tight group-hover:text-[#d89d42] transition-colors">
+                    <h3 className="text-base font-serif font-bold text-[#26170d] mb-1.5 leading-tight group-hover:text-[#8c1d28] transition-colors">
                       {video.title}
                     </h3>
-                    <p className="text-xs text-[#c2dfd3] font-light leading-relaxed">
+                    <p className="text-xs text-[#6d5644] font-light leading-relaxed">
                       {video.description}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-[#1b4d3e]/70 flex items-center justify-between text-[11px] text-[#a3c9b8]">
-                    <span className="flex items-center gap-1">
+                  <div className="mt-3 pt-2.5 border-t border-[#ebdcc8] flex items-center justify-between text-[11px] text-[#6d5644]">
+                    <span className="flex items-center gap-1 font-serif">
                       <Sparkles className="w-3 h-3 text-[#d89d42]" />
                       <span>22 Frasi • Bari Centro</span>
                     </span>
                     <button
                       onClick={() => togglePlay(video.id)}
-                      className="text-[#d89d42] hover:text-amber-200 font-semibold cursor-pointer"
+                      className="text-[#8c1d28] hover:text-[#5a1017] font-semibold cursor-pointer"
                     >
                       {isPlaying ? "Pausa" : "Riproduci"}
                     </button>

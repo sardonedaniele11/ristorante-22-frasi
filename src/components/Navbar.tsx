@@ -9,7 +9,6 @@ import {
   Phone,
   Menu,
   X,
-  Clock,
   Utensils,
   BookOpen,
   Film,
@@ -19,7 +18,6 @@ import {
   ExternalLink,
   Sparkles,
   Home,
-  MessageCircle,
 } from "lucide-react";
 import {
   InstagramIcon,
@@ -39,7 +37,7 @@ export default function Navbar() {
   const navItems = [
     {
       title: "Home",
-      subtitle: "Bistrò, accoglienza & orari",
+      subtitle: "Bistrò, accoglienza & formule",
       href: "/",
       icon: Home,
       iconColor: "text-[#d89d42]",
@@ -50,7 +48,7 @@ export default function Navbar() {
       subtitle: "Formule da 7€ & Menù completi in PDF",
       href: "/menu",
       icon: Utensils,
-      iconColor: "text-rose-400",
+      iconColor: "text-[#8c1d28]",
       badge: "PDF Ufficiali",
       badgeBg: "bg-[#8c1d28] text-white",
     },
@@ -59,45 +57,45 @@ export default function Navbar() {
       subtitle: "Il manifesto e il significato del bistrò",
       href: "/storia",
       icon: BookOpen,
-      iconColor: "text-amber-300",
+      iconColor: "text-[#a0742d]",
       badge: "Manifesto",
-      badgeBg: "bg-[#164e43] text-[#d89d42] border border-[#2a6d58]",
+      badgeBg: "bg-[#f3e7d3] text-[#8c1d28] border border-[#d8be9f]",
     },
     {
       title: "Vivi l'Esperienza",
       subtitle: "Video reel bombette & galleria del locale",
       href: "/esperienza",
       icon: Film,
-      iconColor: "text-emerald-400",
+      iconColor: "text-[#1d6b56]",
       badge: "Video & Foto",
-      badgeBg: "bg-[#007a68]/40 text-[#a3c9b8] border border-[#007a68]",
+      badgeBg: "bg-[#e2f1ec] text-[#165544] border border-[#a8d5c8]",
     },
     {
       title: "Recensioni Clienti",
       subtitle: "5.0 ★ Eccellenza su TripAdvisor",
       href: "/recensioni",
       icon: Star,
-      iconColor: "text-[#00e693]",
+      iconColor: "text-[#00aa6c]",
       badge: "5.0 ★",
-      badgeBg: "bg-[#00aa6c]/20 text-[#00e693] border border-[#00aa6c]/50",
+      badgeBg: "bg-[#e6f7f0] text-[#008755] border border-[#a2e6cc]",
     },
     {
       title: "Dove Siamo & Orari",
       subtitle: "Via Nicolò Putignani 144, Bari Centro",
       href: "/#orari-e-contatti",
       icon: MapPin,
-      iconColor: "text-amber-400",
+      iconColor: "text-[#8c1d28]",
       badge: null,
     },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#071712]/95 backdrop-blur-md border-b border-[#1b4d3e]/80 text-neutral-100 transition-all shadow-xl">
+    <header className="sticky top-0 z-50 w-full bg-[#fcf9f4]/95 backdrop-blur-md border-b border-[#dfcfb9] text-[#26170d] transition-all shadow-xs">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo & Brand Identity */}
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
-            <div className="relative w-9 h-9 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#0d2821] border border-[#2a6d58] p-1 flex items-center justify-center">
+            <div className="relative w-9 h-9 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-xs group-hover:scale-105 transition-transform duration-300 bg-white border border-[#dfcfb9] p-1 flex items-center justify-center">
               <Image
                 src={siteConfig.logoIcon}
                 alt="22 Frasi Logo"
@@ -107,10 +105,10 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg sm:text-2xl font-serif tracking-wider text-white group-hover:text-[#d89d42] transition-colors font-bold leading-none sm:leading-tight">
+              <span className="text-lg sm:text-2xl font-serif tracking-wider text-[#26170d] group-hover:text-[#8c1d28] transition-colors font-bold leading-none sm:leading-tight">
                 22 FRASI
               </span>
-              <span className="text-[9px] sm:text-[11px] text-[#d89d42] font-medium tracking-tight font-sans mt-0.5">
+              <span className="text-[9px] sm:text-[11px] text-[#8c1d28] font-semibold tracking-tight font-sans mt-0.5">
                 {siteConfig.subtitle}
               </span>
             </div>
@@ -121,7 +119,7 @@ export default function Navbar() {
             <Link
               href="/"
               className={`transition-colors ${
-                pathname === "/" ? "text-[#d89d42] font-bold" : "text-neutral-200 hover:text-[#d89d42]"
+                pathname === "/" ? "text-[#8c1d28] font-bold" : "text-[#4a3424] hover:text-[#8c1d28]"
               }`}
             >
               Home
@@ -130,11 +128,11 @@ export default function Navbar() {
             <Link
               href="/menu"
               className={`transition-colors font-bold flex items-center gap-1.5 ${
-                pathname === "/menu" ? "text-amber-300" : "text-[#d89d42] hover:text-amber-200"
+                pathname === "/menu" ? "text-[#8c1d28]" : "text-[#6d5644] hover:text-[#8c1d28]"
               }`}
             >
               <span>Menù &amp; Pranzo</span>
-              <span className="px-1.5 py-0.5 rounded text-[10px] bg-[#8c1d28] text-white font-mono uppercase tracking-wider shadow-sm">
+              <span className="px-1.5 py-0.5 rounded text-[10px] bg-[#8c1d28] text-white font-mono uppercase tracking-wider shadow-xs">
                 PDF
               </span>
             </Link>
@@ -142,7 +140,7 @@ export default function Navbar() {
             <Link
               href="/storia"
               className={`transition-colors ${
-                pathname === "/storia" ? "text-[#d89d42] font-bold" : "text-neutral-200 hover:text-[#d89d42]"
+                pathname === "/storia" ? "text-[#8c1d28] font-bold" : "text-[#4a3424] hover:text-[#8c1d28]"
               }`}
             >
               Storia di 22 Frasi
@@ -151,11 +149,11 @@ export default function Navbar() {
             <Link
               href="/esperienza"
               className={`transition-colors flex items-center gap-1.5 ${
-                pathname === "/esperienza" ? "text-[#d89d42] font-bold" : "text-neutral-200 hover:text-[#d89d42]"
+                pathname === "/esperienza" ? "text-[#8c1d28] font-bold" : "text-[#4a3424] hover:text-[#8c1d28]"
               }`}
             >
               <span>Vivi l&apos;Esperienza</span>
-              <span className="px-1.5 py-0.5 rounded text-[9px] bg-[#007a68]/40 border border-[#007a68] text-[#a3c9b8] font-semibold uppercase">
+              <span className="px-1.5 py-0.5 rounded text-[9px] bg-[#eef6f2] border border-[#a8d5c8] text-[#165544] font-semibold uppercase">
                 Video &amp; Foto
               </span>
             </Link>
@@ -163,18 +161,18 @@ export default function Navbar() {
             <Link
               href="/recensioni"
               className={`transition-colors flex items-center gap-1.5 ${
-                pathname === "/recensioni" ? "text-[#d89d42] font-bold" : "text-neutral-200 hover:text-[#d89d42]"
+                pathname === "/recensioni" ? "text-[#8c1d28] font-bold" : "text-[#4a3424] hover:text-[#8c1d28]"
               }`}
             >
               <span>Recensioni</span>
-              <span className="px-1.5 py-0.5 rounded text-[10px] bg-[#00aa6c]/20 border border-[#00aa6c]/50 text-[#00e693] font-bold">
+              <span className="px-1.5 py-0.5 rounded text-[10px] bg-[#00aa6c]/15 border border-[#00aa6c]/30 text-[#008755] font-bold">
                 5.0 ★
               </span>
             </Link>
 
             <Link
               href="/#orari-e-contatti"
-              className="text-neutral-200 hover:text-[#d89d42] transition-colors"
+              className="text-[#4a3424] hover:text-[#8c1d28] transition-colors"
             >
               Orari &amp; Contatti
             </Link>
@@ -186,7 +184,7 @@ export default function Navbar() {
               href={siteConfig.contact.tripadvisor}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-full text-neutral-300 hover:text-[#00aa6c] hover:bg-[#0e271d] transition-colors border border-transparent hover:border-[#2a6d58]"
+              className="p-2.5 rounded-full text-[#6d5644] hover:text-[#00aa6c] hover:bg-[#f3ecdf] transition-colors border border-transparent hover:border-[#dfcfb9]"
               title="TripAdvisor 5.0 - Recensioni Verificate"
             >
               <TripAdvisorIcon className="w-4 h-4" />
@@ -196,7 +194,7 @@ export default function Navbar() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-lg shadow-emerald-950/40 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 bg-[#8c1d28] hover:bg-[#a12330] text-white font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-md shadow-[#8c1d28]/20 transition-all hover:scale-105"
             >
               <WhatsAppIcon className="w-4 h-4 fill-white" />
               <span>Prenota Tavolo</span>
@@ -209,7 +207,7 @@ export default function Navbar() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-md active:scale-95 transition-all"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-xs active:scale-95 transition-all"
               title="Prenota su WhatsApp"
               aria-label="Prenota su WhatsApp"
             >
@@ -220,8 +218,8 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className={`inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold tracking-wide border transition-all duration-300 ${
                 isOpen
-                  ? "bg-[#8c1d28] border-rose-500/50 text-white shadow-lg shadow-[#8c1d28]/40"
-                  : "bg-[#0d2821] border-[#2a6d58] text-[#d89d42] hover:bg-[#12362c] hover:text-white"
+                  ? "bg-[#8c1d28] border-rose-700 text-white shadow-md"
+                  : "bg-white border-[#dfcfb9] text-[#26170d] hover:bg-[#f5eeea]"
               }`}
               aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
             >
@@ -232,7 +230,7 @@ export default function Navbar() {
                 </>
               ) : (
                 <>
-                  <Menu className="w-4 h-4 text-[#d89d42]" />
+                  <Menu className="w-4 h-4 text-[#8c1d28]" />
                   <span className="font-sans font-bold">Menù</span>
                 </>
               )}
@@ -241,13 +239,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Modern High-End Stylized Mobile Dropdown */}
+      {/* Modern High-End Stylized Mobile Dropdown in Warm Light Cream */}
       {isOpen && (
-        <div className="lg:hidden border-b border-[#2a6d58] bg-gradient-to-b from-[#071712] via-[#091f18] to-[#071712] shadow-2xl backdrop-blur-xl animate-in slide-in-from-top-3 duration-300 overflow-hidden">
+        <div className="lg:hidden border-b border-[#dfcfb9] bg-gradient-to-b from-[#fcf9f4] via-[#f7f1e5] to-[#f4ecdf] shadow-xl backdrop-blur-xl animate-in slide-in-from-top-3 duration-300 overflow-hidden">
           {/* Top Brand Banner */}
-          <div className="px-4 py-3 bg-[#0d2821]/90 border-b border-[#1b4d3e]/70 flex items-center justify-between">
+          <div className="px-4 py-3 bg-white/80 border-b border-[#dfcfb9] flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded-lg bg-[#071712] border border-[#2a6d58] p-0.5 relative flex items-center justify-center">
+              <div className="w-7 h-7 rounded-lg bg-white border border-[#dfcfb9] p-0.5 relative flex items-center justify-center">
                 <Image
                   src={siteConfig.logoIcon}
                   alt="Logo"
@@ -256,17 +254,17 @@ export default function Navbar() {
                 />
               </div>
               <div>
-                <span className="text-[11px] font-serif font-bold text-white tracking-wider block leading-none">
+                <span className="text-[11px] font-serif font-bold text-[#26170d] tracking-wider block leading-none">
                   22 FRASI • BISTRO
                 </span>
-                <span className="text-[9px] text-[#a3c9b8] block mt-0.5">
+                <span className="text-[9px] text-[#6d5644] block mt-0.5">
                   Via Putignani, 144 • Bari Centro
                 </span>
               </div>
             </div>
 
-            <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#164e43] border border-[#2a6d58] text-[9px] font-mono text-[#d89d42]">
-              <Sparkles className="w-2.5 h-2.5" />
+            <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#f2e7d5] border border-[#d6be9f] text-[9px] font-mono text-[#8c1d28]">
+              <Sparkles className="w-2.5 h-2.5 text-[#d89d42]" />
               <span>Puglia DOC</span>
             </div>
           </div>
@@ -284,16 +282,16 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`group relative flex items-center justify-between p-3 rounded-2xl border transition-all duration-200 active:scale-[0.98] ${
                     isActive
-                      ? "bg-gradient-to-r from-[#12362c] to-[#0d2821] border-[#d89d42] shadow-md shadow-[#d89d42]/10"
-                      : "bg-[#0a1f18]/90 border-[#1b4d3e]/80 hover:bg-[#0f2d23] hover:border-[#2a6d58]"
+                      ? "bg-white border-[#8c1d28] shadow-md ring-1 ring-[#8c1d28]"
+                      : "bg-white/70 border-[#dfcfb9] hover:bg-white hover:border-[#bda587]"
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <div
                       className={`w-9 h-9 rounded-xl flex items-center justify-center border transition-transform duration-200 group-hover:scale-105 ${
                         isActive
-                          ? "bg-[#d89d42] border-[#d89d42] text-[#07130e]"
-                          : "bg-[#071712] border-[#1b4d3e] " + item.iconColor
+                          ? "bg-[#8c1d28] border-[#8c1d28] text-white"
+                          : "bg-[#faf6ee] border-[#dfcfb9] " + item.iconColor
                       }`}
                     >
                       <Icon className="w-4 h-4" />
@@ -304,8 +302,8 @@ export default function Navbar() {
                         <span
                           className={`font-serif text-sm font-bold tracking-wide transition-colors ${
                             isActive
-                              ? "text-[#d89d42]"
-                              : "text-white group-hover:text-[#d89d42]"
+                              ? "text-[#8c1d28]"
+                              : "text-[#26170d] group-hover:text-[#8c1d28]"
                           }`}
                         >
                           {item.title}
@@ -318,7 +316,7 @@ export default function Navbar() {
                           </span>
                         )}
                       </div>
-                      <span className="text-[10px] text-[#a3c9b8] font-light leading-tight mt-0.5">
+                      <span className="text-[10px] text-[#6d5644] font-light leading-tight mt-0.5">
                         {item.subtitle}
                       </span>
                     </div>
@@ -326,7 +324,7 @@ export default function Navbar() {
 
                   <ChevronRight
                     className={`w-4 h-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 ${
-                      isActive ? "text-[#d89d42]" : "text-neutral-500 group-hover:text-neutral-200"
+                      isActive ? "text-[#8c1d28]" : "text-[#9d8977] group-hover:text-[#26170d]"
                     }`}
                   />
                 </Link>
@@ -340,10 +338,10 @@ export default function Navbar() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-semibold text-xs shadow-lg shadow-emerald-950/60 active:scale-[0.98] transition-all"
+              className="flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-semibold text-xs shadow-md active:scale-[0.98] transition-all"
             >
               <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-xl bg-white/15 backdrop-blur-md">
+                <div className="p-2 rounded-xl bg-white/20 backdrop-blur-md">
                   <WhatsAppIcon className="w-4 h-4 fill-white" />
                 </div>
                 <div>
@@ -351,7 +349,7 @@ export default function Navbar() {
                     Prenota un Tavolo su WhatsApp
                   </span>
                   <span className="block text-[10px] text-emerald-100 font-light">
-                    Risposta immediata per pranzo o cena
+                    Risposta rapida per pranzo o cena
                   </span>
                 </div>
               </div>
@@ -360,16 +358,16 @@ export default function Navbar() {
           </div>
 
           {/* Social and Fast Contact Pill Row */}
-          <div className="p-3.5 pt-2 border-t border-[#1b4d3e]/60 bg-[#061410]/70">
+          <div className="p-3.5 pt-2 border-t border-[#dfcfb9] bg-white/60">
             <div className="grid grid-cols-4 gap-2 text-center">
               <a
                 href={siteConfig.contact.tripadvisor}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-2 rounded-xl bg-[#0a1f18] border border-[#1b4d3e] hover:border-[#00aa6c] transition-all group"
+                className="flex flex-col items-center justify-center p-2 rounded-xl bg-white border border-[#dfcfb9] hover:border-[#00aa6c] transition-all group shadow-xs"
               >
                 <TripAdvisorIcon className="w-4 h-4 text-[#00aa6c] group-hover:scale-110 transition-transform" />
-                <span className="text-[9px] text-[#a3c9b8] mt-1 font-medium group-hover:text-white">
+                <span className="text-[9px] text-[#6d5644] mt-1 font-medium group-hover:text-[#26170d]">
                   TripAdvisor
                 </span>
               </a>
@@ -378,10 +376,10 @@ export default function Navbar() {
                 href={siteConfig.contact.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-2 rounded-xl bg-[#0a1f18] border border-[#1b4d3e] hover:border-pink-500 transition-all group"
+                className="flex flex-col items-center justify-center p-2 rounded-xl bg-white border border-[#dfcfb9] hover:border-pink-500 transition-all group shadow-xs"
               >
-                <InstagramIcon className="w-4 h-4 text-pink-400 group-hover:scale-110 transition-transform" />
-                <span className="text-[9px] text-[#a3c9b8] mt-1 font-medium group-hover:text-white">
+                <InstagramIcon className="w-4 h-4 text-pink-600 group-hover:scale-110 transition-transform" />
+                <span className="text-[9px] text-[#6d5644] mt-1 font-medium group-hover:text-[#26170d]">
                   Instagram
                 </span>
               </a>
@@ -390,20 +388,20 @@ export default function Navbar() {
                 href={siteConfig.contact.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-2 rounded-xl bg-[#0a1f18] border border-[#1b4d3e] hover:border-blue-500 transition-all group"
+                className="flex flex-col items-center justify-center p-2 rounded-xl bg-white border border-[#dfcfb9] hover:border-blue-500 transition-all group shadow-xs"
               >
-                <FacebookIcon className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
-                <span className="text-[9px] text-[#a3c9b8] mt-1 font-medium group-hover:text-white">
+                <FacebookIcon className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
+                <span className="text-[9px] text-[#6d5644] mt-1 font-medium group-hover:text-[#26170d]">
                   Facebook
                 </span>
               </a>
 
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                className="flex flex-col items-center justify-center p-2 rounded-xl bg-[#0a1f18] border border-[#1b4d3e] hover:border-[#d89d42] transition-all group"
+                className="flex flex-col items-center justify-center p-2 rounded-xl bg-white border border-[#dfcfb9] hover:border-[#8c1d28] transition-all group shadow-xs"
               >
-                <Phone className="w-4 h-4 text-[#d89d42] group-hover:scale-110 transition-transform" />
-                <span className="text-[9px] text-[#a3c9b8] mt-1 font-medium group-hover:text-white">
+                <Phone className="w-4 h-4 text-[#8c1d28] group-hover:scale-110 transition-transform" />
+                <span className="text-[9px] text-[#6d5644] mt-1 font-medium group-hover:text-[#26170d]">
                   Chiama
                 </span>
               </a>

@@ -64,36 +64,36 @@ export default function GallerySection() {
   };
 
   return (
-    <section id="galleria" className="py-10 sm:py-24 bg-[#0a1f19] text-neutral-100 relative overflow-hidden">
+    <section id="galleria" className="py-10 sm:py-16 bg-[#f4ecdf] text-[#26170d] relative overflow-hidden border-t border-[#dfcfb9]">
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b4d3e]/60 border border-[#2a6d58] text-[#d89d42] text-[10px] sm:text-xs uppercase tracking-widest font-semibold mb-2.5 sm:mb-4 shadow-sm">
-            <Sparkles className="w-3 h-3" />
-            <span>Foto Ufficiali di 22 Frasi</span>
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f2e7d5] border border-[#d6be9f] text-[#8c1d28] text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-2.5 shadow-xs">
+            <Sparkles className="w-3 h-3 text-[#d89d42]" />
+            <span>Foto &amp; Video Ufficiali 22 Frasi</span>
           </div>
 
-          <h2 className="text-2xl sm:text-5xl font-serif font-bold text-white tracking-tight mb-2 sm:mb-4">
-            I Nostri <span className="text-[#d89d42] italic">Piatti &amp; La Location</span>
+          <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#26170d] tracking-tight mb-2">
+            I Nostri <span className="text-[#8c1d28] italic">Piatti &amp; La Location</span>
           </h2>
 
-          <p className="text-xs sm:text-lg text-[#c2dfd3] font-light leading-relaxed max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-[#6d5644] font-light leading-relaxed max-w-xl mx-auto">
             Scopri le creazioni autentiche della cucina barese e la bellezza del nostro locale e del giardino all&apos;aperto in Via Putignani.
           </p>
         </div>
 
-        {/* Big Switcher: Cibo (Food) vs Location vs Video - Fully responsive on mobile */}
+        {/* Big Switcher: Cibo (Food) vs Location vs Video */}
         <div className="flex items-center justify-center mb-5 sm:mb-8">
-          <div className="w-full max-w-lg grid grid-cols-3 p-1 rounded-xl sm:rounded-2xl bg-[#071712] border border-[#2a6d58] shadow-xl">
+          <div className="w-full max-w-md grid grid-cols-3 p-1 rounded-xl bg-white border border-[#dfcfb9] shadow-xs">
             <button
               onClick={() => {
                 setActiveTab("food");
                 setActiveCategory("tutti");
               }}
-              className={`inline-flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 px-1 sm:px-4 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+              className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 py-2 px-1 rounded-lg text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
                 activeTab === "food"
-                  ? "bg-[#8c1d28] text-white shadow-lg shadow-[#8c1d28]/30"
-                  : "text-[#a3c9b8] hover:text-white"
+                  ? "bg-[#8c1d28] text-white shadow-xs"
+                  : "text-[#6d5644] hover:text-[#26170d]"
               }`}
             >
               <Utensils className="w-3.5 h-3.5 shrink-0" />
@@ -105,10 +105,10 @@ export default function GallerySection() {
                 setActiveTab("location");
                 setActiveCategory("tutti");
               }}
-              className={`inline-flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 px-1 sm:px-4 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+              className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 py-2 px-1 rounded-lg text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
                 activeTab === "location"
-                  ? "bg-[#007a68] text-white shadow-lg shadow-[#007a68]/30"
-                  : "text-[#a3c9b8] hover:text-white"
+                  ? "bg-[#d89d42] text-[#26170d] shadow-xs font-bold"
+                  : "text-[#6d5644] hover:text-[#26170d]"
               }`}
             >
               <MapPin className="w-3.5 h-3.5 shrink-0" />
@@ -120,10 +120,10 @@ export default function GallerySection() {
                 setActiveTab("video");
                 setActiveCategory("tutti");
               }}
-              className={`inline-flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 px-1 sm:px-4 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+              className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 py-2 px-1 rounded-lg text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
                 activeTab === "video"
-                  ? "bg-[#d89d42] text-[#07130e] font-bold shadow-lg shadow-[#d89d42]/30"
-                  : "text-[#a3c9b8] hover:text-white"
+                  ? "bg-[#26170d] text-white shadow-xs"
+                  : "text-[#6d5644] hover:text-[#26170d]"
               }`}
             >
               <Film className="w-3.5 h-3.5 shrink-0" />
@@ -132,17 +132,17 @@ export default function GallerySection() {
           </div>
         </div>
 
-        {/* Sub-categories - Horizontally scrollable on mobile (for photo tabs) */}
+        {/* Sub-categories */}
         {activeTab !== "video" && (
-          <div className="flex items-center gap-1.5 sm:gap-2 mb-6 sm:mb-10 overflow-x-auto no-scrollbar py-1 px-1 -mx-2 sm:mx-0 sm:justify-center whitespace-nowrap">
+          <div className="flex items-center gap-1.5 sm:gap-2 mb-6 sm:mb-8 overflow-x-auto no-scrollbar py-1 px-1 -mx-2 sm:mx-0 sm:justify-center whitespace-nowrap">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-all ${
                   activeCategory === cat
-                    ? "bg-[#d89d42] text-[#07130e] font-bold shadow-md"
-                    : "bg-[#0e271d] text-[#c2dfd3] border border-[#1b4d3e] hover:border-[#d89d42]/50 hover:text-white"
+                    ? "bg-[#8c1d28] text-white font-bold shadow-xs"
+                    : "bg-white text-[#6d5644] border border-[#dfcfb9] hover:border-[#8c1d28] hover:text-[#8c1d28]"
                 }`}
               >
                 {cat === "tutti" ? "Tutte le foto" : cat}
@@ -157,7 +157,7 @@ export default function GallerySection() {
             {galleryVideos.map((video) => (
               <div
                 key={video.id}
-                className="rounded-2xl overflow-hidden bg-[#0e271d] border border-[#1b4d3e] shadow-lg flex flex-col"
+                className="rounded-2xl overflow-hidden bg-white border border-[#dfcfb9] shadow-xs flex flex-col"
               >
                 <div className="relative aspect-[9/14] w-full bg-black">
                   <video
@@ -170,24 +170,24 @@ export default function GallerySection() {
                     controls
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#071712]/80 backdrop-blur-md border border-[#2a6d58] text-[9px] font-mono uppercase tracking-wider text-[#d89d42]">
+                  <div className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-md border border-[#dfcfb9] text-[9px] font-mono uppercase tracking-wider text-[#8c1d28] font-bold">
                     {video.category}
                   </div>
                 </div>
                 <div className="p-3.5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-serif font-bold text-white text-sm mb-1">
+                    <h3 className="font-serif font-bold text-[#26170d] text-sm mb-1">
                       {video.title}
                     </h3>
-                    <p className="text-[11px] text-[#c2dfd3] font-light leading-relaxed">
+                    <p className="text-[11px] text-[#6d5644] font-light leading-relaxed">
                       {video.description}
                     </p>
                   </div>
-                  <div className="mt-3 pt-2 border-t border-[#1b4d3e]/70 flex items-center justify-between text-[10px] text-[#a3c9b8]">
+                  <div className="mt-3 pt-2 border-t border-[#ebdcc8] flex items-center justify-between text-[10px] text-[#6d5644]">
                     <span className="flex items-center gap-1">
-                      <VolumeX className="w-3 h-3 text-[#d89d42]" /> Senza audio
+                      <VolumeX className="w-3 h-3 text-[#8c1d28]" /> Senza audio
                     </span>
-                    <span className="text-[#d89d42] font-semibold">22 Frasi Bari</span>
+                    <span className="text-[#8c1d28] font-semibold">22 Frasi Bari</span>
                   </div>
                 </div>
               </div>
@@ -195,39 +195,34 @@ export default function GallerySection() {
           </div>
         ) : (
           /* Photo Grid - 2 columns on mobile */
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-5">
             {filteredPhotos.map((photo) => (
               <div
                 key={photo.id}
                 onClick={() => setSelectedPhoto(photo)}
-                className="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-[#0e271d] border border-[#1b4d3e] hover:border-[#d89d42] shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5"
+                className="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-white border border-[#dfcfb9] hover:border-[#8c1d28] shadow-xs cursor-pointer transition-all duration-300 hover:-translate-y-0.5"
               >
-                <div className="relative h-32 sm:h-60 w-full overflow-hidden bg-black/20">
+                <div className="relative h-32 sm:h-52 w-full overflow-hidden bg-black/5">
                   <Image
                     src={photo.src}
                     alt={photo.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e271d] via-[#0e271d]/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-
-                  {/* Badge Category */}
-                  <div className="absolute top-2 left-2 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg bg-[#071712]/85 backdrop-blur-md border border-[#2a6d58] text-[8px] sm:text-[10px] font-mono uppercase tracking-wider text-[#d89d42]">
+                  <div className="absolute top-2 left-2 px-1.5 sm:px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-md border border-[#dfcfb9] text-[8px] sm:text-[9px] font-mono uppercase tracking-wider text-[#8c1d28] font-bold">
                     {photo.category}
                   </div>
-
-                  {/* Zoom icon on hover */}
-                  <div className="absolute top-2 right-2 p-1.5 rounded-md bg-[#071712]/80 text-white opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
+                  <div className="absolute top-2 right-2 p-1.5 rounded-md bg-white/90 text-[#26170d] opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
                     <Maximize2 className="w-3.5 h-3.5" />
                   </div>
                 </div>
 
-                <div className="p-2 sm:p-4">
-                  <h3 className="font-serif font-bold text-white text-xs sm:text-base group-hover:text-[#d89d42] transition-colors line-clamp-1 mb-0.5 sm:mb-1">
+                <div className="p-2 sm:p-3.5">
+                  <h3 className="font-serif font-bold text-[#26170d] text-xs sm:text-sm group-hover:text-[#8c1d28] transition-colors line-clamp-1 mb-0.5">
                     {photo.title}
                   </h3>
-                  <p className="text-[10px] sm:text-xs text-neutral-300 font-light line-clamp-1 sm:line-clamp-2 leading-relaxed">
+                  <p className="text-[10px] sm:text-xs text-[#6d5644] font-light line-clamp-1 sm:line-clamp-2 leading-tight">
                     {photo.description}
                   </p>
                 </div>
@@ -240,67 +235,56 @@ export default function GallerySection() {
       {/* Lightbox Modal */}
       {selectedPhoto && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 sm:p-6"
           onClick={() => setSelectedPhoto(null)}
         >
           <div
-            className="relative max-w-4xl w-full bg-[#0d2821] border border-[#2a6d58] rounded-3xl overflow-hidden shadow-2xl"
+            className="relative max-w-3xl w-full bg-[#fbf8f2] border border-[#dfcfb9] rounded-2xl overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
             <button
               onClick={() => setSelectedPhoto(null)}
-              className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 text-white hover:bg-black/90 transition-colors"
+              className="absolute top-3 right-3 z-20 p-2 rounded-full bg-white/80 text-[#26170d] hover:bg-white transition-colors"
               aria-label="Chiudi finestra"
             >
               <X className="w-5 h-5" />
             </button>
 
-            {/* Navigation buttons */}
             <button
               onClick={handlePrev}
-              className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-black/60 text-white hover:bg-black/90 transition-colors"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/80 text-[#26170d] hover:bg-white transition-colors"
               aria-label="Precedente"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
 
             <button
               onClick={handleNext}
-              className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-black/60 text-white hover:bg-black/90 transition-colors"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/80 text-[#26170d] hover:bg-white transition-colors"
               aria-label="Successivo"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5" />
             </button>
 
-            {/* Image display */}
-            <div className="relative h-[60vh] sm:h-[70vh] w-full bg-black flex items-center justify-center">
+            <div className="relative h-[55vh] sm:h-[65vh] w-full bg-black flex items-center justify-center">
               <Image
                 src={selectedPhoto.src}
                 alt={selectedPhoto.title}
                 fill
                 className="object-contain"
-                priority
               />
             </div>
 
-            {/* Info bar */}
-            <div className="p-6 bg-[#071712] border-t border-[#1b4d3e] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#d89d42] block mb-1">
-                  {selectedPhoto.type === "food" ? "Piatto della Casa" : "Ambiente & Location"} • {selectedPhoto.category}
-                </span>
-                <h3 className="text-lg sm:text-xl font-serif font-bold text-white mb-1">
-                  {selectedPhoto.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-300 font-light max-w-xl">
-                  {selectedPhoto.description}
-                </p>
-              </div>
-
-              <div className="text-xs text-[#a3c9b8] font-mono whitespace-nowrap">
-                {currentIndex + 1} di {filteredPhotos.length}
-              </div>
+            <div className="p-4 bg-white border-t border-[#dfcfb9]">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#8c1d28] font-bold block mb-1">
+                {selectedPhoto.category}
+              </span>
+              <h3 className="font-serif font-bold text-base text-[#26170d] mb-1">
+                {selectedPhoto.title}
+              </h3>
+              <p className="text-xs text-[#6d5644] font-light">
+                {selectedPhoto.description}
+              </p>
             </div>
           </div>
         </div>
