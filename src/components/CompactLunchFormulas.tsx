@@ -1,7 +1,6 @@
 import { lunchFormulas } from "@/data/restaurantData";
 import { siteConfig } from "@/config/site";
-import { Clock, Check, ShoppingBag, ArrowRight } from "lucide-react";
-import { WhatsAppIcon } from "@/components/SocialIcons";
+import { Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface CompactLunchProps {
@@ -9,10 +8,6 @@ interface CompactLunchProps {
 }
 
 export default function CompactLunchFormulas({ showPdfLink = true }: CompactLunchProps) {
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
-    "Ciao! Vorrei informazioni sulle formule pranzo di 22 Frasi o prenotare un tavolo."
-  )}`;
-
   return (
     <section id="formule-pranzo" className="py-4 sm:py-6 bg-[#f4ecdf] text-[#2c1d11] relative border-b border-[#dfcfb9]">
       <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -39,7 +34,7 @@ export default function CompactLunchFormulas({ showPdfLink = true }: CompactLunc
         </div>
 
         {/* Griglia Formule compatta e orizzontale/strutturata */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-2.5 mb-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-2.5">
           {lunchFormulas.map((formula) => (
             <div
               key={formula.id}
@@ -74,24 +69,6 @@ export default function CompactLunchFormulas({ showPdfLink = true }: CompactLunc
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Micro-Callout Prenotazione Pranzo */}
-        <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#dfcfb9] flex items-center justify-between gap-2">
-          <div className="flex items-center gap-1.5 text-[11px] text-[#6d5644]">
-            <Clock className="w-3.5 h-3.5 text-[#8c1d28] shrink-0" />
-            <span className="truncate">Lun – Sab 12:00–16:00 • Primi caldi espressi &amp; Dehor</span>
-          </div>
-
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-[11px] shrink-0 shadow-xs"
-          >
-            <WhatsAppIcon className="w-3 h-3 fill-white" />
-            <span>Prenota</span>
-          </a>
         </div>
       </div>
     </section>
