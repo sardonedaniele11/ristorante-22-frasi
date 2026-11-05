@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { Sparkles, Utensils, MapPin } from "lucide-react";
-import { WhatsAppIcon } from "@/components/SocialIcons";
+import { WhatsAppIcon, InstagramIcon, FacebookIcon } from "@/components/SocialIcons";
 import Link from "next/link";
 
 export default function Hero() {
@@ -46,8 +46,8 @@ export default function Hero() {
           Primi caldi della tradizione • Formule Pranzo • Dehor all&apos;aperto
         </p>
 
-        {/* Fast Action Buttons: Prenota, Menù PDF, Dove Siamo */}
-        <div className="w-full max-w-lg flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+        {/* Fast Action Buttons: Prenota, Menù PDF, Dove Siamo, Instagram, Facebook */}
+        <div className="w-full max-w-2xl flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
           <a
             href={whatsappUrl}
             target="_blank"
@@ -72,6 +72,28 @@ export default function Hero() {
           >
             <MapPin className="w-3.5 h-3.5 text-[#8c1d28] shrink-0" />
             <span>Dove Siamo</span>
+          </a>
+
+          <a
+            href={siteConfig.contact.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-1.5 bg-white hover:bg-[#faf5ec] text-[#26170d] border border-[#dfcfb9] font-semibold text-xs sm:text-sm px-3 sm:px-3.5 py-2 rounded-xl shadow-xs transition-all text-center hover:border-[#c13584]/60 group"
+            aria-label="Instagram 22 Frasi"
+          >
+            <InstagramIcon className="w-3.5 h-3.5 text-[#c13584] group-hover:scale-110 transition-transform shrink-0" />
+            <span>Instagram</span>
+          </a>
+
+          <a
+            href={siteConfig.contact.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-1.5 bg-white hover:bg-[#faf5ec] text-[#26170d] border border-[#dfcfb9] font-semibold text-xs sm:text-sm px-3 sm:px-3.5 py-2 rounded-xl shadow-xs transition-all text-center hover:border-[#1877f2]/60 group"
+            aria-label="Facebook 22 Frasi"
+          >
+            <FacebookIcon className="w-3.5 h-3.5 text-[#1877f2] group-hover:scale-110 transition-transform shrink-0" fill={true} />
+            <span>Facebook</span>
           </a>
         </div>
       </div>
