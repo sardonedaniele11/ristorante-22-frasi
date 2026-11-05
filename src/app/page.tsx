@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CompactLunchFormulas from "@/components/CompactLunchFormulas";
-import ManifestoSection from "@/components/ManifestoSection";
+import HomeManifestoBackground from "@/components/HomeManifestoBackground";
 import ContactAndHours from "@/components/ContactAndHours";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -21,7 +21,7 @@ export default function Home() {
       <main className="flex-1 pb-16 lg:pb-0">
         <Hero />
         <CompactLunchFormulas showPdfLink={true} />
-        <ManifestoSection />
+        <HomeManifestoBackground />
         <ContactAndHours />
       </main>
       <Footer />
