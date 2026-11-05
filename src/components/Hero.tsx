@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { Sparkles, Utensils, Clock } from "lucide-react";
+import { Sparkles, Utensils, MapPin } from "lucide-react";
 import { WhatsAppIcon } from "@/components/SocialIcons";
 import Link from "next/link";
 
@@ -46,16 +46,16 @@ export default function Hero() {
           Primi caldi della tradizione • Formule Pranzo da 7€ • Dehor all&apos;aperto
         </p>
 
-        {/* Fast Action Buttons */}
-        <div className="w-full max-w-md flex items-center justify-center gap-2 sm:gap-3">
+        {/* Fast Action Buttons: Prenota, Menù PDF, Dove Siamo */}
+        <div className="w-full max-w-lg flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm px-4 sm:px-5 py-2 rounded-xl shadow-xs transition-all"
+            className="inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm px-3.5 sm:px-4 py-2 rounded-xl shadow-xs transition-all"
           >
             <WhatsAppIcon className="w-3.5 h-3.5 fill-white" />
-            <span>Prenota su WhatsApp</span>
+            <span>Prenota</span>
           </a>
 
           <Link
@@ -65,6 +65,14 @@ export default function Hero() {
             <Utensils className="w-3.5 h-3.5 text-[#8c1d28] shrink-0" />
             <span>Menù PDF</span>
           </Link>
+
+          <a
+            href="#orari-e-contatti"
+            className="inline-flex items-center justify-center gap-1.5 bg-[#f2e7d5] hover:bg-[#e7d8c1] text-[#26170d] border border-[#d6be9f] font-semibold text-xs sm:text-sm px-3.5 sm:px-4 py-2 rounded-xl shadow-xs transition-all text-center"
+          >
+            <MapPin className="w-3.5 h-3.5 text-[#8c1d28] shrink-0" />
+            <span>Dove Siamo</span>
+          </a>
         </div>
       </div>
     </section>
