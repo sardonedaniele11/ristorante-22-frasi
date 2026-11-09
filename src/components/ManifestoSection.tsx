@@ -36,17 +36,17 @@ export default function ManifestoSection() {
             <div className="relative rounded-2xl sm:rounded-3xl p-3 sm:p-4 bg-white border border-[#dfcfb9] shadow-md max-w-sm w-full">
               <div className="relative w-full overflow-hidden rounded-xl bg-[#faf6ee]">
                 <Image
-                  src="/images/manifesto-22-frasi.jpg"
-                  alt="Il Manifesto Grafico Ufficiale di 22 Frasi"
-                  width={1066}
-                  height={1600}
+                  src="/images/manifesto-grafica-ufficiale.jpg"
+                  alt="Il Manifesto Ufficiale di 22 Frasi - Specialità Gastronomiche Pugliesi"
+                  width={1400}
+                  height={2000}
                   className="w-full h-auto object-contain block select-none"
                   priority
                 />
               </div>
               <div className="mt-3 pt-2 text-center border-t border-[#ebdcc8]">
                 <span className="text-[11px] font-mono text-[#6d5644]">
-                  Il Manifesto originale esposto nel locale in Via Putignani
+                  Il Manifesto ufficiale di 22 Frasi • Specialità Gastronomiche Pugliesi
                 </span>
               </div>
             </div>
