@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { siteConfig } from "@/config/site";
-import { FileText, Download, Clock, ArrowRight } from "lucide-react";
+import { FileText, Download, Clock, ArrowRight, ShieldAlert, Info } from "lucide-react";
 import { WhatsAppIcon } from "@/components/SocialIcons";
 import Link from "next/link";
 
@@ -109,6 +109,40 @@ export default function MenuPage() {
                   <Download className="w-4 h-4 shrink-0" />
                   <span>Apri / Scarica Menù Sera PDF</span>
                 </a>
+              </div>
+            </div>
+
+            {/* Box Legale Allergeni & Sicurezza Alimentare (Reg. UE 1169/2011) */}
+            <div className="mb-10 p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-[#faf6ee] border border-[#dfcfb9] text-xs text-[#4a3424] space-y-3">
+              <div className="flex items-center gap-2 text-[#8c1d28] font-serif font-bold text-sm sm:text-base">
+                <ShieldAlert className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                <span>Informativa su Allergeni e Sicurezza Alimentare (Reg. UE 1169/2011)</span>
+              </div>
+
+              <p className="leading-relaxed">
+                Gentile cliente, la tua salute e sicurezza sono per noi al primo posto. Se hai <strong>allergie, intolleranze alimentari o celiachia</strong>, ti preghiamo di comunicarlo tempestivamente al nostro personale di sala prima di ordinare o al momento della prenotazione.
+              </p>
+
+              <div className="p-3 rounded-xl bg-white/80 border border-[#ebdcc8] space-y-1.5 text-[11px] sm:text-xs">
+                <p className="font-semibold text-[#26170d] flex items-center gap-1.5">
+                  <Info className="w-3.5 h-3.5 text-[#8c1d28] shrink-0" />
+                  <span>I 14 Allergeni di Legge (All. II Reg. UE 1169/2011):</span>
+                </p>
+                <p className="text-[#6d5644] leading-relaxed">
+                  1. Cereali contenenti glutine • 2. Crostacei • 3. Uova • 4. Pesce • 5. Arachidi • 6. Soia • 7. Latte e derivati • 8. Frutta a guscio • 9. Sedano • 10. Senape • 11. Semi di sesamo • 12. Anidride solforosa e solfiti (&gt;10 mg/kg) • 13. Lupini • 14. Molluschi.
+                </p>
+                <p className="text-[#6d5644] pt-1">
+                  Il nostro personale è a tua completa disposizione per consultare il <em>Registro Cartaceo degli Allergeni</em> con la composizione dettagliata di ogni pietanza.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-[#6d5644] pt-1">
+                <p>
+                  * <strong>Prodotti ittici crudi:</strong> Il pesce destinato a essere consumato crudo o praticamente crudo è stato sottoposto a trattamento di bonifica preventiva mediante abbattimento a -20°C per almeno 24 ore, in conformità al Regolamento CE 853/2004.
+                </p>
+                <p>
+                  * <strong>Prodotti surgelati all&apos;origine:</strong> Alcune materie prime o specialità possono essere surgelate o congelate all&apos;origine dal produttore o abbattute in loco per garantire la massima freschezza e sicurezza igienica.
+                </p>
               </div>
             </div>
 

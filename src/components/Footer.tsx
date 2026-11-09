@@ -146,9 +146,29 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-[#dfcfb9] text-center text-[11px] text-[#85705e] flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>© {new Date().getFullYear()} 22 Frasi - Cucina Caratteristica Pugliese. Tutti i diritti riservati.</p>
-          <p>Via Nicolò Putignani, 144 • Bari Centro</p>
+        <div className="pt-6 border-t border-[#dfcfb9] text-[11px] text-[#6d5644] flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-center md:text-left space-y-1">
+            <p className="font-semibold text-[#26170d]">
+              © {new Date().getFullYear()} {siteConfig.legal.ragioneSociale} • Insegna &ldquo;22 Frasi&rdquo;
+            </p>
+            <p className="text-[10px] text-[#85705e]">
+              Sede: {siteConfig.legal.sedeLegale} • P.IVA: <span className="font-mono font-semibold text-[#26170d]">{siteConfig.legal.piva}</span> • PEC: {siteConfig.legal.pec}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs">
+            <Link href="/privacy" className="hover:text-[#8c1d28] underline underline-offset-2 transition-colors">
+              Privacy Policy (GDPR)
+            </Link>
+            <span className="text-[#dfcfb9]">•</span>
+            <Link href="/cookie" className="hover:text-[#8c1d28] underline underline-offset-2 transition-colors">
+              Cookie Policy
+            </Link>
+            <span className="text-[#dfcfb9]">•</span>
+            <Link href="/termini" className="hover:text-[#8c1d28] underline underline-offset-2 transition-colors">
+              Termini &amp; Note Legali
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

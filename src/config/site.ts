@@ -55,6 +55,18 @@ export const siteConfig = {
     ],
   },
 
+  // Dati Societari & Legali (Obbligatori per legge: Art. 2250 c.c. e D.P.R. 404/2001)
+  legal: {
+    ragioneSociale: "22 FraSì di Daniele Sardone", // Aggiornabile con l'esatta ragione sociale o società
+    piva: "IT08821990729", // Sostituire con la Partita IVA effettiva
+    codiceFiscale: "SRDDNL...", // Sostituire con il Codice Fiscale effettivo
+    sedeLegale: "Via Nicolò Putignani, 144/A/B, 70121 Bari (BA)",
+    pec: "22frasi@pec.it",
+    sdi: "0000000",
+    rea: "BA - XXXXXX",
+    privacyEmail: "privacy@22frasi.it",
+  },
+
   // Galleria foto distinta: Food vs Location
   gallery: allGalleryPhotos,
 
