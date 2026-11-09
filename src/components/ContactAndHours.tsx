@@ -4,7 +4,7 @@ import { WhatsAppIcon } from "@/components/SocialIcons";
 
 export default function ContactAndHours() {
   return (
-    <section id="orari-e-contatti" className="py-12 sm:py-20 bg-[#fbf8f2] text-[#26170d] relative">
+    <section id="orari-e-contatti" className="py-12 sm:py-20 bg-[#fbf8f2]/40 backdrop-blur-[1px] text-[#26170d] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Column: Orari */}

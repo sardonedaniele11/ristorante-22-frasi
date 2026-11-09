@@ -8,7 +8,7 @@ interface CompactLunchProps {
 
 export default function CompactLunchFormulas({ showPdfLink = true }: CompactLunchProps) {
   return (
-    <section id="formule-pranzo" className="py-2.5 sm:py-3 bg-[#f4ecdf] text-[#2c1d11] relative border-b border-[#dfcfb9]">
+    <section id="formule-pranzo" className="py-2.5 sm:py-3 bg-[#f4ecdf]/75 backdrop-blur-[2px] text-[#2c1d11] relative border-b border-[#dfcfb9]/80">
       <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Header: Solo "Formule Pranzo" */}
         <div className="flex items-center justify-between gap-2 mb-2">

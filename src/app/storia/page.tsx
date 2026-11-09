@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MobileBottomBar from "@/components/MobileBottomBar";
-
+import ManifestoSection from "@/components/ManifestoSection";
 
 export const metadata: Metadata = {
   title: "Storia di 22 Frasi | Il Manifesto del Bistrò a Bari",
@@ -17,7 +17,7 @@ export default function StoriaPage() {
       <Navbar />
 
       <main className="flex-1 pb-16 lg:pb-0">
-
+        <ManifestoSection />
       </main>
 
       <Footer />

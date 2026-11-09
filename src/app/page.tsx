@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CompactLunchFormulas from "@/components/CompactLunchFormulas";
-
 import ContactAndHours from "@/components/ContactAndHours";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -16,17 +15,27 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#fbf8f2] text-[#26170d] flex flex-col font-sans selection:bg-[#d89d42] selection:text-white" style={{backgroundImage: "url('/images/manifesto-22-frasi.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}
-      <Navbar />
-      <main className="flex-1 pb-16 lg:pb-0">
-        <Hero />
-        <CompactLunchFormulas showPdfLink={true} />
+    <div className="min-h-screen relative bg-[#fbf8f2] text-[#26170d] flex flex-col font-sans selection:bg-[#d89d42] selection:text-white">
+      {/* Sfondo a tutta pagina con la frase / manifesto di 22 Frasi */}
+      <div
+        aria-hidden="true"
+        className="fixed inset-0 z-0 pointer-events-none opacity-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/manifesto-22-frasi.jpg')",
+        }}
+      />
 
-        <ContactAndHours />
-      </main>
-      <Footer />
-      <FloatingWhatsApp />
-      <MobileBottomBar />
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-1 pb-16 lg:pb-0">
+          <Hero />
+          <CompactLunchFormulas showPdfLink={true} />
+          <ContactAndHours />
+        </main>
+        <Footer />
+        <FloatingWhatsApp />
+        <MobileBottomBar />
+      </div>
     </div>
   );
 }

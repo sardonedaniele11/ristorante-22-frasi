@@ -10,7 +10,7 @@ export default function Hero() {
   )}`;
 
   return (
-    <section className="relative flex items-center justify-center bg-gradient-to-b from-[#fbf8f2] via-[#f7f1e5] to-[#f4ecdf] overflow-hidden pt-4 pb-4 sm:pt-6 sm:pb-6 border-b border-[#dfcfb9]">
+    <section className="relative flex items-center justify-center bg-[#fbf8f2]/30 backdrop-blur-[1px] overflow-hidden pt-4 pb-4 sm:pt-6 sm:pb-6 border-b border-[#dfcfb9]/70">
       {/* Background warm soft ambient glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 right-1/4 w-72 h-72 bg-[#d89d42]/10 rounded-full blur-3xl" />
