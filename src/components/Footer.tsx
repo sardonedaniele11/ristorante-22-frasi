@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { InstagramIcon, FacebookIcon, WhatsAppIcon, TripAdvisorIcon } from "@/components/SocialIcons";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -95,12 +95,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-1.5 text-xs text-[#6d5644]">
               <li className="flex justify-between">
-                <span>Lun – Ven:</span>
-                <span className="font-mono text-[#26170d]">12:00–16:00 / 19:00–23:30</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Sabato:</span>
-                <span className="font-mono text-[#8c1d28] font-bold">11:00–23:30 No Stop</span>
+                <span>Lun – Sab:</span>
+                <span className="font-mono text-[#26170d]">11:30–15:30 / 19:30–23:30</span>
               </li>
               <li className="flex justify-between">
                 <span>Domenica:</span>
@@ -134,12 +130,6 @@ export default function Footer() {
                   className="hover:underline text-emerald-700 font-medium"
                 >
                   WhatsApp: {siteConfig.contact.whatsappDisplay}
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#8c1d28] shrink-0" />
-                <a href={`mailto:${siteConfig.contact.email}`} className="hover:underline">
-                  {siteConfig.contact.email}
                 </a>
               </li>
             </ul>

@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site";
-import { Clock, MapPin, Phone, Mail, Navigation } from "lucide-react";
+import { Clock, MapPin, Phone, Navigation } from "lucide-react";
 import { WhatsAppIcon } from "@/components/SocialIcons";
 
 export default function ContactAndHours() {
@@ -33,16 +33,12 @@ export default function ContactAndHours() {
                       <span className="px-3 py-0.5 rounded-full bg-red-100 border border-red-200 text-red-800 text-xs font-semibold">
                         Chiuso tutto il giorno
                       </span>
-                    ) : schedule.days.includes("Sabato") ? (
-                      <span className="px-3 py-0.5 rounded-full bg-[#fcf0db] border border-[#d89d42]/50 text-[#8c1d28] text-xs font-bold">
-                        11:00 – 23:30 • Orario Continuato
-                      </span>
                     ) : (
                       <>
-                        <span className="px-2 py-0.5 rounded-md bg-[#faf5ec] border border-[#dfcfb9] text-[#8c1d28] text-xs font-medium">
+                        <span className="px-2.5 py-1 rounded-md bg-[#faf5ec] border border-[#dfcfb9] text-[#8c1d28] text-xs font-medium">
                           Pranzo: {schedule.lunch}
                         </span>
-                        <span className="px-2 py-0.5 rounded-md bg-[#faf5ec] border border-[#dfcfb9] text-[#553f2e] text-xs font-medium">
+                        <span className="px-2.5 py-1 rounded-md bg-[#faf5ec] border border-[#dfcfb9] text-[#553f2e] text-xs font-medium">
                           Cena: {schedule.dinner}
                         </span>
                       </>
@@ -53,7 +49,7 @@ export default function ContactAndHours() {
             </div>
 
             <div className="mt-6 p-3.5 rounded-xl bg-[#faf5ec] border border-[#dfcfb9] text-[#553f2e] text-xs leading-relaxed">
-              Consigliamo di prenotare il tavolo via WhatsApp, specialmente per il fine settimana e per gustare le nostre preparazioni speciali a base di burrate fresche e bombette.
+              Consigliamo di prenotare il tavolo via WhatsApp, sia per il pranzo che per la cena.
             </div>
           </div>
 
@@ -126,21 +122,6 @@ export default function ContactAndHours() {
                       className="text-xs sm:text-sm text-emerald-700 hover:underline font-semibold"
                     >
                       {siteConfig.contact.whatsappDisplay}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3.5">
-                  <div className="p-2 rounded-lg bg-[#faf5ec] text-[#8c1d28] border border-[#dfcfb9] mt-0.5">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h5 className="font-serif font-bold text-[#26170d] text-xs sm:text-sm">Email</h5>
-                    <a
-                      href={`mailto:${siteConfig.contact.email}`}
-                      className="text-xs sm:text-sm text-[#8c1d28] hover:underline"
-                    >
-                      {siteConfig.contact.email}
                     </a>
                   </div>
                 </div>

@@ -52,7 +52,6 @@ export default function TerminiPage() {
                 <p><strong>Partita IVA:</strong> {siteConfig.legal.piva}</p>
                 <p><strong>Codice Fiscale:</strong> {siteConfig.legal.codiceFiscale}</p>
                 <p><strong>Posta Elettronica Certificata (PEC):</strong> {siteConfig.legal.pec}</p>
-                <p><strong>Email di Contatto:</strong> {siteConfig.contact.email}</p>
               </div>
             </section>
 

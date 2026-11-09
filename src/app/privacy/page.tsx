@@ -58,7 +58,7 @@ export default function PrivacyPage() {
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail className="w-3.5 h-3.5 text-[#8c1d28] shrink-0" />
-                  <span>Email: {siteConfig.contact.email} • PEC: {siteConfig.legal.pec}</span>
+                  <span>PEC Ufficiale: {siteConfig.legal.pec}</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <Phone className="w-3.5 h-3.5 text-[#8c1d28] shrink-0" />

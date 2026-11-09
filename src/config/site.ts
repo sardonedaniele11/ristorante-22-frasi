@@ -44,13 +44,11 @@ export const siteConfig = {
     facebookName: "22FraSì - Il Bistrò di Puglia",
     tripadvisor:
       "https://www.tripadvisor.it/Restaurant_Review-g187874-d25573773-Reviews-22_FraSi_Il_Bistro_di_Puglia-Bari_Province_of_Bari_Puglia.html",
-    email: "info@22frasi.it",
     address: "Via Nicolò Putignani, 144/A/B, 70121 Bari BA",
     googleMapsUrl:
       "https://www.google.com/maps/search/?api=1&query=22+FraSi+Via+Nicol%C3%B2+Putignani+144+Bari",
     hours: [
-      { days: "Lunedì - Venerdì", lunch: "11:00 - 14:30", dinner: "19:30 - 23:00" },
-      { days: "Sabato", lunch: "11:00 - 23:30 (Orario Continuato)", dinner: "Aperto a cena" },
+      { days: "Lunedì - Sabato", lunch: "11:30 - 15:30", dinner: "19:30 - 23:30" },
       { days: "Domenica", lunch: "Chiuso", dinner: "Chiuso" },
     ],
   },
